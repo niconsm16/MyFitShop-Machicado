@@ -1,29 +1,25 @@
+// VARIABLES GLOBALES
+
 let purchaseMore = true
-let totalPrice
+// Precio Total sin descuentos
+let totalPrice = 0
 
-while (purchaseMore) {
-    productSingle()
-}
+let deliveryPrice = 0
+let deliveryOption
 
-// Products
+// Datos del descuento
+let discountPercent = 0
+let discountType
+let totalDiscount
 
-function partialCost() {
-    let purchaseSelect = prompt(`Usted está llevando ${amount} unidades del producto ${product}
-Su compra tiene un costo de ${total})
-Quiere seguir llevando productos?(s/n)`).trim().toLowerCase()
-    while (purchaseMore) {
-        if (purchaseSelect === "s") {
-            purchaseMore = false
-            break
-        } else if (purchaseSelect === "n") {
-            purchaseMore = false
-            break
-        } else {
-            prompt("Respuesta inválida, inténtelo nuevamente")
-        }
-    }
-}
-function productSingle() {
+// Puntos del usuario
+let points = 0
+
+// FUNCIONES
+
+// Ingresando productos, valor y unidades de compra
+
+function productPurchase() {
 
     while (purchaseMore) {
         let product = prompt("Ingrese el nombre del producto")
@@ -36,61 +32,143 @@ function productSingle() {
     }
 }
 
+// Opcion "Seguir comprando"
+
+function partialCost(amount, product, totalPrice) {
+
+    let selectOption = true
+
+    while (selectOption) {
+        let purchaseSelect = prompt(`Usted está llevando ${amount} unidades del producto ${product}
+Su compra tiene un costo de ${totalPrice})
+Quiere seguir llevando productos?(s/n)`).trim().toLowerCase()
+
+        if (purchaseSelect === "s") {
+            selectOption = false
+        } else if (purchaseSelect === "n") {
+            selectOption = false
+            purchaseMore = false
+        } else {
+            alert("Respuesta inválida, inténtelo nuevamente")
+        }
+    }
+}
+
 // Delivery
 
-let deliveryOption
-let deliveryPrice
-let deliveryTrue = true
+function deliverySelect() {
 
-function deliverySelect(delivery) {
+    let deliveryTrue = true
+
     while (deliveryTrue) {
-        deliveryOption = prompt("desea recibirlo en su casa? (s/n): Recuerde que el envío tiene un costo de $500").trim().toUpperCase()
+        deliveryOption = prompt("desea recibirlo en su casa? (s/n): Recuerde que el envío tiene un costo de $500").trim().toLowerCase()
+
         if (deliveryOption === "s") {
-            deliveryOption = "Ha elegido recibirlo en su casa"
+            deliveryOption = "Ha elegido recibirlo en su casa (costo $500)"
             deliveryPrice = 500
             deliveryTrue = false
-        } else if (delivery === "n") {
-            deliveryOption = "Ha elegido retirar por el local"
-            deliveryPrice = 0
+        } else if (deliveryOption === "n") {
+            deliveryOption = "Ha elegido retirarlo por el local"
             deliveryTrue = false
         } else {
-            prompt("Respuesta inválida, inténtelo nuevamente")
+            alert("Respuesta inválida, inténtelo nuevamente")
         }
     }
 }
 
 // Discounts
 
+function discount(price) {
 
+    const FAMILIAR = 10000
+    const MAYORISTA = 25000
 
-if 
-
-
-
-    function totalDiscount() {
-
+    if (price > MAYORISTA) {
+        discountType = "Mayorista"
+        discountPercent = 20
+        totalDiscount = (price / 100) * discountPercent
+    } else if (price > FAMILIAR) {
+        discountType = "Familiar"
+        discountPercent = 10
+        totalDiscount = (price / 100) * discountPercent
+    } else {
+        // discountType Undefined
+        totalDiscount = 0
     }
+}
 
-totalProduct(amount, price)
+// Proceso final: Precio Final
 
+function finalPrice() {
 
+    const IVA = 21
 
-totalPrice(){ }
+    let ivaPrice = ((totalPrice - totalDiscount) / 100) * IVA
 
-totalDiscount(){ }
+    realPrice = (totalPrice - totalDiscount) + ivaPrice + deliveryPrice
 
+    switch (discountType) {
+        case "Mayorista":
 
+            points = points + 2
 
-total(){ }
+            alert(`Su compra tiene un valor de $${totalPrice}
 
+Ud. ha recibido el descuento ${discountType} de un ${discountPercent}%,
+su descuento es de $${totalDiscount}
 
+${IVA}% IVA = ${ivaPrice}
 
+${deliveryOption}
 
-deliverySelect(deliveryOption)
+El costo total de su compra es de $${realPrice} (imp. incluidos)
 
-prompt(`Su compra ha superado el valor de $${total}
-tiene un descuento d %${discount}`)
+Ha sumado un total de 2 puntos con su compra, lleva acumulados un total de ${points} puntos.
 
-prompt(`Su compra tiene un valor total de 
+Gracias por comprar en nuestra tienda, vuelva pronto.`)
+            break;
 
-    `)
+        case "Familiar":
+
+            points = points + 1
+
+            alert(`Su compra tiene un valor de $${totalPrice}
+
+Ud. ha recibido el descuento ${discountType} de un ${discountPercent}%,
+su descuento es de $${totalDiscount}
+
+${IVA}% IVA = ${ivaPrice}
+
+${deliveryOption}
+
+El costo total de su compra es de $${realPrice} (imp. incluidos)
+
+Ha sumado un total de 1 punto con su compra, lleva acumulados un total de ${points} puntos.
+
+Gracias por comprar en nuestra tienda, vuelva pronto.`)
+            break;
+
+        default:
+
+            points = points + 0
+
+            alert(`Su compra tiene un valor de $${totalPrice}
+
+${IVA}% IVA = ${ivaPrice}
+
+${deliveryOption}
+
+El costo total de su compra es de $${realPrice} (imp. incluidos)
+
+Tiene acumulado ${points} puntos. Su compra no ha generado nuevos puntos.
+
+Gracias por comprar en nuestra tienda, vuelva pronto.`)
+
+            break;
+    }
+}
+
+productPurchase()
+deliverySelect()
+discount(totalPrice)
+finalPrice()
