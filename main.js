@@ -1,174 +1,257 @@
-// VARIABLES GLOBALES
+// Clases
 
-let purchaseMore = true
-// Precio Total sin descuentos
-let totalPrice = 0
-
-let deliveryPrice = 0
-let deliveryOption
-
-// Datos del descuento
-let discountPercent = 0
-let discountType
-let totalDiscount
-
-// Puntos del usuario
-let points = 0
-
-// FUNCIONES
-
-// Ingresando productos, valor y unidades de compra
-
-function productPurchase() {
-
-    while (purchaseMore) {
-        let product = prompt("Ingrese el nombre del producto")
-        let amount = parseInt(prompt("Ingrese la cantidad que llevará del mismo producto"))
-        let price = parseFloat(prompt("Ingrese el precio del producto"))
-        let totalProduct = amount * price
-        totalPrice = totalPrice + totalProduct
-        partialCost(amount, product, totalPrice)
-
+class Product {
+    constructor(product, price, amount) {
+        this.name = product
+        this.price = price
+        this.stock = amount
     }
 }
 
-// Opcion "Seguir comprando"
+// Impresora 
 
-function partialCost(amount, product, totalPrice) {
+const cl = (a) => { return console.log(a) }
 
-    let selectOption = true
+// Limpiadores
 
-    while (selectOption) {
-        let purchaseSelect = prompt(`Usted está llevando ${amount} unidades del producto ${product}
-Su compra tiene un costo de ${totalPrice})
-Quiere seguir llevando productos?(s/n)`).trim().toLowerCase()
+const cleanOption = (a) => { return a.trim().toLowerCase() }
+const cleanVar = (a) => { return a.replace(/\s/g, '').toLowerCase() }
 
-        if (purchaseSelect === "s") {
-            selectOption = false
-        } else if (purchaseSelect === "n") {
-            selectOption = false
-            purchaseMore = false
-        } else {
-            alert("Respuesta inválida, inténtelo nuevamente")
+//Arreglos
+
+const productsList = []
+
+// Variables
+
+let product
+let productSelected
+
+// Datos prueba
+
+let p1 = new Product('GAS', 20, 200)
+productsList.push(p1)
+
+let p2 = new Product('JUGO', 10, 100)
+productsList.push(p2)
+
+let p3 = new Product('GALLETAS', 100, 20)
+productsList.push(p3)
+
+let p4 = new Product('BOLEADORAS', 250, 5)
+productsList.push(p4)
+
+let p5 = new Product('PONCHO ZARPADO', 1000, 2)
+productsList.push(p5)
+
+let p6 = new Product('PIRULINOS', 5, 300)
+productsList.push(p6)
+
+/////////////////////////////////////////////////////////////////
+
+function getNameProduct() {
+
+    product = prompt('Ingrese el nombre del producto').toUpperCase()
+
+    productSelected = (productsList.find(object => cleanVar(object.name) === cleanVar(product)))
+
+    return product, productSelected
+}
+
+function updateProduct(productSelected) {
+
+    productSelected.price = parseInt(prompt('Ingrese el precio unitario del producto'))
+    productSelected.stock = parseInt(prompt('Ingrese la cantidad de unidades del producto'))
+    //cl(productsList)
+}
+
+function addProduct() {
+
+    getNameProduct()
+
+    if (productSelected != undefined) {
+
+        let s2 = true
+
+        while (s2) {
+
+            let answer = cleanOption(prompt('El producto ingresado ya existe, desea actualizar sus datos? (s/n)'))
+
+            if (answer === 's') {
+
+                updateProduct(productSelected)
+
+                break
+
+            } else if (answer === 'n') {
+
+                s2 = false
+
+            } else {
+
+                alert('Ingreso no válido, intente nuevamente')
+                continue
+
+            }
         }
-    }
-}
 
-// Delivery
-
-function deliverySelect() {
-
-    let deliveryTrue = true
-
-    while (deliveryTrue) {
-        deliveryOption = prompt("desea recibirlo en su casa? (s/n): Recuerde que el envío tiene un costo de $500").trim().toLowerCase()
-
-        if (deliveryOption === "s") {
-            deliveryOption = "Ha elegido recibirlo en su casa (costo $500)"
-            deliveryPrice = 500
-            deliveryTrue = false
-        } else if (deliveryOption === "n") {
-            deliveryOption = "Ha elegido retirarlo por el local"
-            deliveryTrue = false
-        } else {
-            alert("Respuesta inválida, inténtelo nuevamente")
-        }
-    }
-}
-
-// Discounts
-
-function discount(price) {
-
-    const FAMILIAR = 10000
-    const MAYORISTA = 25000
-
-    if (price > MAYORISTA) {
-        discountType = "Mayorista"
-        discountPercent = 20
-        totalDiscount = (price / 100) * discountPercent
-    } else if (price > FAMILIAR) {
-        discountType = "Familiar"
-        discountPercent = 10
-        totalDiscount = (price / 100) * discountPercent
     } else {
-        // discountType Undefined
-        totalDiscount = 0
+
+        price = parseInt(prompt('Ingrese el precio unitario del producto'))
+        amount = parseInt(prompt('Ingrese la cantidad de unidades del producto'))
+
+        let newProduct = new Product(product, price, amount)
+        productsList.push(newProduct)
+
     }
 }
 
-// Proceso final: Precio Final
+function listProduct() {
 
-function finalPrice() {
+    getNameProduct()
 
-    const IVA = 21
+    if (productSelected != undefined) {
 
-    let ivaPrice = ((totalPrice - totalDiscount) / 100) * IVA
+        alert(`Detalles del producto:
+Nombre: ${productSelected.name}
+Precio por unidad: ${productSelected.price}
+Cantidad en stock: ${productSelected.stock}`)
 
-    realPrice = (totalPrice - totalDiscount) + ivaPrice + deliveryPrice
+    } else {
 
-    switch (discountType) {
-        case "Mayorista":
-
-            points = points + 2
-
-            alert(`Su compra tiene un valor de $${totalPrice}
-
-Ud. ha recibido el descuento ${discountType} de un ${discountPercent}%,
-su descuento es de $${totalDiscount}
-
-${IVA}% IVA = ${ivaPrice}
-
-${deliveryOption}
-
-El costo total de su compra es de $${realPrice} (imp. incluidos)
-
-Ha sumado un total de 2 puntos con su compra, lleva acumulados un total de ${points} puntos.
-
-Gracias por comprar en nuestra tienda, vuelva pronto.`)
-            break;
-
-        case "Familiar":
-
-            points = points + 1
-
-            alert(`Su compra tiene un valor de $${totalPrice}
-
-Ud. ha recibido el descuento ${discountType} de un ${discountPercent}%,
-su descuento es de $${totalDiscount}
-
-${IVA}% IVA = ${ivaPrice}
-
-${deliveryOption}
-
-El costo total de su compra es de $${realPrice} (imp. incluidos)
-
-Ha sumado un total de 1 punto con su compra, lleva acumulados un total de ${points} puntos.
-
-Gracias por comprar en nuestra tienda, vuelva pronto.`)
-            break;
-
-        default:
-
-            points = points + 0
-
-            alert(`Su compra tiene un valor de $${totalPrice}
-
-${IVA}% IVA = ${ivaPrice}
-
-${deliveryOption}
-
-El costo total de su compra es de $${realPrice} (imp. incluidos)
-
-Tiene acumulado ${points} puntos. Su compra no ha generado nuevos puntos.
-
-Gracias por comprar en nuestra tienda, vuelva pronto.`)
-
-            break;
+        alert(`El producto ${product} es inexistente.`)
     }
 }
 
-productPurchase()
-deliverySelect()
-discount(totalPrice)
-finalPrice()
+function modifyProduct() {
+
+    getNameProduct()
+
+    if (productSelected != undefined) {
+
+        alert(`Detalles del producto a modificar:
+Nombre: ${productSelected.name}
+Precio por unidad: ${productSelected.price}
+Cantidad en stock: ${productSelected.stock}`)
+
+        newName = prompt('Ingrese el nuevo nombre del producto:').toUpperCase()
+
+        updateProduct(productSelected)
+
+        productSelected.name = newName
+
+        alert(`Nuevos valores del producto
+Nombre: ${productSelected.name}
+Precio por unidad: ${productSelected.price}
+Cantidad en stock: ${productSelected.stock}
+        `)
+
+    } else {
+
+        alert(`El producto ${product} es inexistente.`)
+    }
+
+}
+
+function deleteProduct() {
+
+    getNameProduct()
+
+    if (productSelected != undefined) {
+
+        let s3 = true
+
+        while (s3) {
+            let delOption = cleanOption(prompt(`DETALLES DEL PRODUCTO A ELIMINAR:
+Nombre: ${productSelected.name}
+Precio por unidad: ${productSelected.price}
+Cantidad en stock: ${productSelected.stock}
+
+ATENCION: EL PRODUCTO UNA VEZ BORRADO NO SE PODRÁ RECUPERAR
+Está seguro de borrar este producto? (s/n)`))
+
+            switch (delOption) {
+
+                case 's':
+
+                    let indexProduct = productsList.indexOf(productSelected)
+                    productsList.splice(indexProduct, 1)
+                    s3 = false
+                    break
+
+                case 'n':
+
+                    s3 = false
+                    break
+
+                default:
+                    alert('Dato ingresado no válido. Intente nuevamente')
+
+            }
+        }
+
+    } else {
+        alert(`El producto ${product} es inexistente.`)
+    }
+
+}
+
+////////////////////////////////////////////////////////////
+
+function Administrator() {
+
+    let s1 = true
+
+    while (s1) {
+
+        cl(productsList)
+
+        let answer = cleanOption(prompt(`Qué desea hacer?
+
+a- Cargar un producto
+b- Listar un producto
+c- Modificar un producto
+d- Borrar un producto
+e- Salir
+`))
+
+        switch (answer) {
+
+            case 'a':
+
+                addProduct()
+
+                continue
+
+            case 'b':
+
+                listProduct()
+
+                continue
+
+            case 'c':
+
+                modifyProduct()
+
+                continue
+
+            case 'd':
+
+                deleteProduct()
+
+                continue
+
+            case 'e':
+                s1 = false
+                break
+
+            default:
+                alert('Dato ingresado no válido. Intente nuevamente')
+                continue
+        }
+    }
+
+}
+
+// Main
+
+Administrator()
