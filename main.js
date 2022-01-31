@@ -8,6 +8,14 @@ class Product {
     }
 }
 
+class Carrito {
+    constructor(product, amount, subtotal) {
+        this.product = product
+        this.amount = amount
+        this.partial = subtotal
+    }
+}
+
 // Impresora 
 
 const cl = (a) => { return console.log(a) }
@@ -46,7 +54,67 @@ productsList.push(p5)
 let p6 = new Product('PIRULINOS', 5, 300)
 productsList.push(p6)
 
+
 /////////////////////////////////////////////////////////////////
+
+// Menu Cliente
+
+function addToCart() {
+
+    let arrayProductsList = ""
+    let i = 1
+
+    // Conversión del Array en lista para mostrarlo en Alert
+    productsList.forEach(n => { arrayProductsList += i + " - " + n.name + " - " + n.price + "\n"; i++ })
+    cl(arrayProductsList)
+
+    let keyProduct = parseInt(prompt(`Seleccione el producto que desea comprar:
+${arrayProductsList}
+`))
+
+    keyProduct--
+    /*
+        productSelected = (cart.find(object => cleanVar(object.product) === cleanVar(productsList[keyProduct].name)))
+    
+        if (productSelected != undefined) {
+            //lo encontró
+    
+            let select = parseInt(prompt(`Ya tienes cargado el producto, qué deseas hacer?
+    1- agregar más unidades al carrito
+    2- eliminar del carrito
+    3- salir`))
+    
+    
+        } else {
+            //no lo encontró
+    
+            let amountProduct = parseInt(prompt('Cuántas unidades va a llevar?'))
+    
+            let partial = (amountProduct * productsList[keyProduct].price)
+    
+            let newOrder = new Carrito(productsList[keyProduct].name, amountProduct, partial)
+            cart.push(newOrder)
+    
+            subtotal += partial
+        }*/
+}
+/*
+purchase = true
+while (purchase) { }
+*/
+/////////////////////////////////////////////////////////////////
+
+function Client() {
+
+    const cart = []
+    let subtotal = 0
+
+    addToCart()
+}
+
+/////////////////////////////////////////////////////////////////
+
+// Menu Administrador
 
 function getNameProduct() {
 
@@ -195,7 +263,7 @@ Está seguro de borrar este producto? (s/n)`))
 
 }
 
-////////////////////////////////////////////////////////////
+///////////////////////////
 
 function Administrator() {
 
@@ -252,6 +320,45 @@ e- Salir
 
 }
 
+/////////////////////////////////////////////////////////////////
+
 // Main
 
-Administrator()
+function main() {
+
+    let s0 = true
+
+    while (s0) {
+
+        let answer = cleanOption(prompt(`Elija su usuario:
+
+a- Administrador
+b- Cliente
+c- Salir
+`))
+        switch (answer) {
+
+            case 'a':
+
+                Administrator()
+                break
+
+            case 'b':
+
+                Client()
+                break
+
+            case 'c':
+
+                s0 = false
+                break
+
+            default:
+
+                alert('Dato ingresado no válido. Intente nuevamente')
+                continue
+        }
+    }
+}
+
+main()
