@@ -60,11 +60,39 @@ productsList.push(p6)
 
 // Menu Cliente
 
+function invalidInput() {
+    return alert('Ingreso de dato inválido. Por favor ingrese un nuevo valor')
+}
+
+function checkStock(a, b, c) { //partial, amountProduct)
+
+    let findOut = true
+
+    while (findOut) {
+
+        c = parseInt(prompt('Cuántas unidades va a llevar?'))
+
+        if (c > productsList[a].stock) {
+
+            alert(`El local cuenta con ${productsList[a].stock} unidades. Por favor ingrese un valor inferior o igual a éste monto. Gracias.`)
+            continue
+
+        } else {
+
+            b = (c * productsList[a].price)
+            productsList[a].stock -= c
+
+            findOut = false
+        }
+    }
+    return [b, c]
+}
+
 function addToCart(cart) {
 
     let arrayProductsList = ""
-    let i = 1
     let stillPurchase = true
+    let i = 1
 
     // Conversión del Array en lista para mostrarlo en Alert
     productsList.forEach(n => { arrayProductsList += i + " - " + n.name + " - " + n.price + "\n"; i++ })
@@ -91,6 +119,9 @@ ${arrayProductsList}999 - 'VACIAR EL CARRITO'
             //trucamos el keyProduct para usarlo de key del arreglo
             keyProduct--
 
+            let partial = 0
+            let amountProduct = 0
+
             //Comprobar existencia del producto en el carrito
             productSelected = (cart.find(object => cleanVar(object.product) === cleanVar(productsList[keyProduct].name)))
 
@@ -110,9 +141,10 @@ ${arrayProductsList}999 - 'VACIAR EL CARRITO'
 
                         case 1:
 
-                            let amountProduct = parseInt(prompt('Cuántas unidades va a llevar?'))
+                            let resultCheck = checkStock(keyProduct, partial, amountProduct)
 
-                            let partial = (amountProduct * productsList[keyProduct].price)
+                            partial = resultCheck[0]
+                            amountProduct = resultCheck[1]
 
                             productSelected.amount += amountProduct
                             productSelected.partial += partial
@@ -133,8 +165,7 @@ ${arrayProductsList}999 - 'VACIAR EL CARRITO'
                             break
 
                         default:
-
-                            alert('Ingreso de dato inválido. Por favor ingrese un nuevo valor')
+                            invalidInput()
                             continue
                     }
                 }
@@ -142,19 +173,18 @@ ${arrayProductsList}999 - 'VACIAR EL CARRITO'
 
             } else {
                 //no lo encontró
-                cl('NO lo encontro')
 
-                let amountProduct = parseInt(prompt('Cuántas unidades va a llevar?'))
+                let resultCheck = checkStock(keyProduct, partial, amountProduct)
 
-                let partial = (amountProduct * productsList[keyProduct].price)
+                partial = resultCheck[0]
+                amountProduct = resultCheck[1]
 
                 let newOrder = new Carrito(productsList[keyProduct].name, amountProduct, partial)
                 cart.push(newOrder)
-
             }
 
         } else {
-            alert('Ingreso de dato inválido. Por favor ingrese un nuevo valor')
+            invalidInput()
             continue
         }
     }
@@ -165,7 +195,6 @@ ${arrayProductsList}999 - 'VACIAR EL CARRITO'
 /////////////////////////////////////////////////////////////////
 
 function Client() {
-
 
     addToCart(cart)
 
@@ -239,7 +268,7 @@ function addProduct() {
 
             } else {
 
-                alert('Ingreso no válido, intente nuevamente')
+                invalidInput()
                 continue
 
             }
@@ -335,7 +364,7 @@ Está seguro de borrar este producto? (s/n)`))
                     break
 
                 default:
-                    alert('Dato ingresado no válido. Intente nuevamente')
+                    invalidInput()
 
             }
         }
@@ -396,7 +425,7 @@ e- Salir
                 break
 
             default:
-                alert('Dato ingresado no válido. Intente nuevamente')
+                invalidInput()
                 continue
         }
     }
@@ -438,7 +467,7 @@ c- Salir
 
             default:
 
-                alert('Dato ingresado no válido. Intente nuevamente')
+                invalidInput()
                 continue
         }
     }
