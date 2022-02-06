@@ -42,7 +42,7 @@ function nightTh() {
 
         //Version de Dia
 
-        bodynt[0].className = ''
+        bodynt[0].className = 'bg-zinc-100'
 
         logo.src = "https://raw.githubusercontent.com/niconsm16/Myfit-Machicado/master/src/images/myfitlogo.webp"
 
@@ -80,7 +80,7 @@ function userType() {
 
     } else {
 
-        window.location = '/pages/user.html';
+        window.location = '/src/pages/user.html';
 
     }
 }
