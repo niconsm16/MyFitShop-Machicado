@@ -9,9 +9,11 @@ function nightTh() {
 
     let bodynt = document.getElementsByTagName("body")
     let logo = document.getElementById('logo')
+
     let signin = document.getElementById('signin')
     let signup = document.getElementById('signup')
     let rememberme = document.querySelector('#remember2')
+
     let regHere = document.querySelector('#regHere')
     let forgetPass = document.querySelector('#forgetPass')
 
@@ -77,16 +79,12 @@ function userType() {
     // Comprobación de usuario - Console Logs y Debuggers para ver que los datos se ingresan y registran correctamente
 
     if ((b.value === 'admin') && (c.value === 'admin')) {
-        console.log(b.value)
-        console.log(c.value)
-        debugger
-        window.location = 'https://www.youtube.com/';
+
+        window.location = '/pages/admin.html';
 
     } else {
-        console.log(b.value)
-        console.log(c.value)
-        debugger
-        window.location = '/src/pages/user.html';
+
+        window.location = '/pages/user.html';
 
     }
 }
