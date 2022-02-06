@@ -8,6 +8,7 @@
 
     <link rel="shortcut icon" href="src/images/favicon.ico">
 
+    <link rel="stylesheet" href="login.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -33,15 +34,16 @@
     <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
             <div>
-                <img class="mx-auto h-24 w-auto"
+                <img id="logo" class="mx-auto h-24 w-auto"
                     src="https://raw.githubusercontent.com/niconsm16/Myfit-Machicado/master/src/images/myfitlogo.webp"
                     alt="Workflow">
-                <h2 class="mt-8 text-center text-3xl font-extrabold text-gray-900">
+
+                <h2 id="signin" class="mt-8 text-center text-3xl font-extrabold text-gray-900">
                     Ingresa a tu cuenta
                 </h2>
-                <p class="mt-2 text-center text-sm text-gray-600">
+                <p id="signup" class="mt-2 text-center text-sm text-gray-600">
                     No tenés cuenta?
-                    <a href="#" class="font-medium text-green-600 hover:text-verde">
+                    <a href="#" id='regHere' class="font-medium text-green-600 hover:text-verde">
                         registrate acá!
                     </a>
                 </p>
@@ -67,13 +69,13 @@
                     <div class="flex items-center">
                         <input id="remember-me" name="remember-me" type="checkbox"
                             class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                        <label for="remember-me" class="ml-2 block text-sm text-gray-900">
+                        <label id='remember2' for="remember-me" class="ml-2 block text-sm text-gray-900">
                             Recuérdame
                         </label>
                     </div>
 
                     <div class="text-sm">
-                        <a href="#" class="font-medium text-green-600 hover:text-verde">
+                        <a href="#" id='forgetPass' class="font-medium text-green-600 hover:text-verde">
                             Olvidaste tu contraseña?
                         </a>
                     </div>
@@ -93,6 +95,13 @@
                         </span>
                         Ingresar
                     </button>
+                </div>
+
+                <div class="text-center pt-6">
+                    <button id='button' value='0' type="button" class="w-auto text-center py-2 px-4 border-2 border-zinc-900 text-sm font-medium rounded-md
+                        text-white bg-zinc-600 hover:bg-gradient-to-r from-violet-600 to-zinc-900 focus:outline-none focus:ring-2
+                        focus:ring-offset-2 focus:ring-indigo-500">Probá
+                        la versión nocturna</button>
                 </div>
             </form>
         </div>
