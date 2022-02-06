@@ -74,12 +74,18 @@ a.onclick = () => userType()
 
 function userType() {
 
-    if ((b.value == '=admin') && (c.value == 'admin')) {
+    // Comprobación de usuario - Console Logs y Debuggers para ver que los datos se ingresan y registran correctamente
 
+    if ((b.value === 'admin') && (c.value === 'admin')) {
+        console.log(b.value)
+        console.log(c.value)
+        debugger
         window.location = 'https://www.youtube.com/';
 
     } else {
-
+        console.log(b.value)
+        console.log(c.value)
+        debugger
         window.location = '/src/pages/user.html';
 
     }
