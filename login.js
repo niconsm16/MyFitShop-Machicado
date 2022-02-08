@@ -65,27 +65,33 @@ function nightTh() {
 
 //# Login
 
-let b = document.getElementById('username')
-let c = document.getElementById('password')
+let form = document.getElementById('userLogin')
 
-let a = document.getElementById('submit')
-
-a.onclick = () => userType()
+form.onsubmit = userType.bind(form)
 
 
+function userType(e) {
 
-function userType() {
+    e.preventDefault()
+
+    let b = document.getElementById('username')
+    let c = document.getElementById('password')
 
     // Comprobación de usuario - Console Logs y Debuggers para ver que los datos se ingresan y registran correctamente
 
     if ((b.value === 'admin') && (c.value === 'admin')) {
-
-        window.location = '/pages/admin.html';
-
+        // Una forma de redirección .replace()
+        location.replace('/pages/admin.html')
     } else {
-
-        window.location = '/pages/user.html';
-
+        // Otra forma de redirección href =
+        location.href = '/pages/user.html'
     }
 }
+
+
+
+
+
+
+
 
