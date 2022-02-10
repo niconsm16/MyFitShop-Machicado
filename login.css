@@ -1,0 +1,26 @@
+.lunita {
+    width: 10em;
+    background-image: url('https://raw.githubusercontent.com/niconsm16/MyFitShop-Machicado/main/src/images/tucuman-moony.png');
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    height: 10em;
+    background-position: center;
+    background-size: cover;
+    animation: luni 2s;
+    -webkit-animation: luni 2s ;
+    z-index: -1;
+}
+
+@keyframes luni{
+        0% {
+            opacity: 0;
+        }
+        
+        40% {
+            opacity: 1
+        }
+        100% {
+            opacity: 1
+        }
+    }
