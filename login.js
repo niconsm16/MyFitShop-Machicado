@@ -69,7 +69,6 @@ let form = document.getElementById('userLogin')
 
 form.onsubmit = userType.bind(form)
 
-
 function userType(e) {
 
     e.preventDefault()
@@ -79,12 +78,12 @@ function userType(e) {
 
     // Comprobación de usuario - Console Logs y Debuggers para ver que los datos se ingresan y registran correctamente
 
-    if ((b.value === 'admin') && (c.value === 'admin')) {
+    if ((b.value === "admin") && (c.value === "admin")) {
         // Una forma de redirección .replace()
-        location.replace('/pages/admin.html')
+        location.replace("/pages/admin.html")
     } else {
         // Otra forma de redirección href =
-        location.href = '/pages/user.html'
+        location.href = "/pages/user.html"
     }
 }
 
