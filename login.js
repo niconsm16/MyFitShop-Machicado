@@ -69,6 +69,10 @@ let form = document.getElementById('userLogin')
 
 form.onsubmit = userType.bind(form)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> eee1d66b1f0508429ac879f8d5dee675283b4d20
 function userType(e) {
 
     e.preventDefault()
@@ -78,7 +82,11 @@ function userType(e) {
 
     // Comprobación de usuario - Console Logs y Debuggers para ver que los datos se ingresan y registran correctamente
 
+<<<<<<< HEAD
     if ((b.value === "admin") && (c.value === "admin")) {
+=======
+    if ((b.value === 'admin') && (c.value === 'admin')) {
+>>>>>>> eee1d66b1f0508429ac879f8d5dee675283b4d20
         // Una forma de redirección .replace()
         location.replace("/pages/admin.html")
     } else {
