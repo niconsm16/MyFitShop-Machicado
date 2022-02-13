@@ -80,10 +80,10 @@ function userType(e) {
 
     if ((b.value === "admin") && (c.value === "admin")) {
         // Una forma de redirección .replace()
-        location.replace("/pages/admin.html")
+        location.replace("../pages/admin.html")
     } else {
         // Otra forma de redirección href =
-        location.href = "/pages/user.html"
+        location.href = "../pages/user.html"
     }
 }
 
