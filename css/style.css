@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap');
+
+:root{
+    --asap: 'Asap Condensed', sans-serif;
+}
+
+
+.lunita {
+    width: 10em;
+    background-image: url('https://raw.githubusercontent.com/niconsm16/MyFitShop-Machicado/main/src/images/tucuman-moony.png');
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    height: 10em;
+    background-position: center;
+    background-size: cover;
+    animation: luni 2s;
+    -webkit-animation: luni 2s ;
+    z-index: -1;
+}
+
+@keyframes luni{
+        0% {
+            opacity: 0;
+        }
+        
+        40% {
+            opacity: 1
+        }
+        100% {
+            opacity: 1
+        }
+    }
+
+.disappear {
+    display: none;
+    opacity: 0;
+    transition: all 10s ;
+    -webkit-transition: all 10s ;
+    -moz-transition: all 10s ;
+    -ms-transition: all 10s ;
+    -o-transition: all 10s ;
+}
+
+.appear {
+    display: flex;
+    opacity: 1;
+    transition: all 10s ;
+    -webkit-transition: all 10s ;
+    -moz-transition: all 10s ;
+    -ms-transition: all 10s ;
+    -o-transition: all 10s ;
+}
