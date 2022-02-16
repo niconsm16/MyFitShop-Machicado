@@ -10,7 +10,7 @@ function addProduct() {
     showAddProduct(noshow, show)
 
     let form = document.getElementById('createProduct')
-
+    // Agregar Producto
     form.onsubmit = receiveProduct.bind(form)
 
     function receiveProduct(e) {
@@ -44,12 +44,15 @@ function addProduct() {
                 existProduct.stock = z.value
 
                 showAlert(show, noshow)
-
                 resetFields()
+                listProducts()
             }
 
             updateNo.onclick = () => {
+
                 showAlert(show, noshow)
+                resetFields()
+
             }
         }
 

@@ -21,25 +21,26 @@ function listProducts() {
 
         if (idCompare) {
 
-            // Si existe reemplaza el actual por variacion de valores
-            continue
+            // Si existe remover de la lista para actualizar
+            idCompare.remove()
+        }
+
+        // Si no existe se crea su respectiva fila con sus datos
+        let tr = document.createElement('tr')
+        tr.id = cleanVar(productsList[i].name)
+
+        if (i % 2 == 0) {
+
+            tr.innerHTML = `<td class="w-3/5 bg-zinc-200">${productsList[i].name}</td><td class="w-1/5 bg-zinc-200">${productsList[i].price}</td><td class="w-1/5 bg-zinc-200">${productsList[i].stock}</td>`
+
+            table.appendChild(tr)
 
         } else {
-            // Si no existe se crea su respectiva fila con sus datos
-            let tr = document.createElement('tr')
 
-            if (i % 2 == 0) {
+            tr.innerHTML = `<td class="w-3/5 bg-zinc-300">${productsList[i].name}</td><td class="w-1/5 bg-zinc-300">${productsList[i].price}</td><td class="w-1/5 bg-zinc-300">${productsList[i].stock}</td>`
 
-                tr.innerHTML = `<td class="w-3/5 bg-zinc-200" id=${cleanVar(productsList[i].name)}>${productsList[i].name}</td><td class="w-1/5 bg-zinc-200">${productsList[i].price}</td><td class="w-1/5 bg-zinc-200">${productsList[i].stock}</td>`
-
-                table.appendChild(tr)
-
-            } else {
-
-                tr.innerHTML = `<td class="w-3/5 bg-zinc-300" id=${cleanVar(productsList[i].name)}>${productsList[i].name}</td><td class="w-1/5 bg-zinc-300">${productsList[i].price}</td><td class="w-1/5 bg-zinc-300">${productsList[i].stock}</td>`
-
-                table.appendChild(tr)
-            }
+            table.appendChild(tr)
         }
+
     }
 }

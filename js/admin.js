@@ -3,6 +3,10 @@
 const show = 'appear'
 const noshow = 'disappear'
 
+// Listado de Productos por defecto
+
+
+
 // Cambio de titulo
 
 function title(currentTitle) {
@@ -38,3 +42,5 @@ select3.onclick = () => { updateProduct() }
 let select4 = document.getElementById('option4')
 
 select4.onclick = () => { deleteProduct() }
+
+listProducts()

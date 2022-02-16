@@ -6,4 +6,6 @@ function updateProduct() {
 
     // Ocultar Add Product
     showAddProduct(show, noshow)
+
+
 }
