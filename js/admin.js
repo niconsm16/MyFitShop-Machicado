@@ -11,9 +11,10 @@ function title(currentTitle) {
 }
 
 // Menu Agregar Producto
-
 const showAddProduct = (a, b) => { document.getElementById('createProduct').classList.replace(a, b) }
 
+// Menu Alerta
+const showAlert = (a, b) => { document.getElementById('alert').classList.replace(a, b) }
 
 // Listado de Productos
 

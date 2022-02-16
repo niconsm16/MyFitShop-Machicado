@@ -1,13 +1,13 @@
 function addProduct() {
 
-    // Titulo
+    // Mostrar Título
 
     currentTitle = 'option2'
     title(currentTitle)
 
-    showAddProduct(noshow, show)
+    // Mostrar Formulario
 
-    // nameProduct priceProduct stockProduct
+    showAddProduct(noshow, show)
 
     let form = document.getElementById('createProduct')
 
@@ -18,45 +18,62 @@ function addProduct() {
         e.preventDefault()
 
         let x = document.getElementById('nameProduct')
+        x.value = x.value.toUpperCase()
         let y = document.getElementById('priceProduct')
         let z = document.getElementById('stockProduct')
 
         // Comprobar existencia
+
         existProduct = (productsList.find(object => cleanVar(object.name) === cleanVar(x.value)))
 
         if (existProduct != undefined) {
-            // Si existe
-            let s2 = true
 
-            while (s2) {
+            // Cuadro de Alerta: Producto existente
 
-                let answer = cleanOption(prompt('El producto ingresado ya existe, desea actualizar sus datos? (s/n)'))
+            showAlert(noshow, show)
 
-                if (answer === 's') {
+            const updateYes = document.getElementById('updateYes')
+            const updateNo = document.getElementById('updateNo')
 
-                    // updateProduct(productSelected)
+            updateYes.onclick = () => {
 
-                    break
+                // Sí: Update / Ocultar Alert / Resetear Celdas
 
-                } else if (answer === 'n') {
+                existProduct.name = x.value
+                existProduct.price = y.value
+                existProduct.stock = z.value
 
-                    s2 = false
+                showAlert(show, noshow)
 
-                } else {
-
-                    invalidInput()
-                    continue
-
-                }
+                resetFields()
             }
 
-        } else {
+            updateNo.onclick = () => {
+                showAlert(show, noshow)
+            }
+        }
+
+        else {
+
             // Si no existe
+
             let newProduct = new Product(x.value, y.value, z.value)
             productsList.push(newProduct)
-            cl(productsList)
+
+            resetFields()
             listProducts()
+
         }
+
+        //Limpiar inputs
+
+
     }
 }
+function resetFields() {
 
+    document.getElementById('nameProduct').value = ''
+    document.getElementById('priceProduct').value = ''
+    document.getElementById('stockProduct').value = ''
+
+}

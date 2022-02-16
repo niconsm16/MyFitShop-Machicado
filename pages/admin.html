@@ -74,7 +74,7 @@
                 <div class=" items-center w-7/12">
                     <input id="nameProduct" name="nameProduct" type="text" required
                         class="w-full text-center appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
-                        placeholder="Ingrese el nombre del producto aquí">
+                        placeholder="Ingrese el nombre del producto">
                     <input id="priceProduct" name="priceProduct" type="number" required
                         class="w-full text-center appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                         placeholder="Ingrese el precio de venta">
@@ -104,13 +104,23 @@
         <h4>MyFit Shop ®2022. Todos los derechos reservados</h4>
     </footer>
 
-    <script src="../js/base.js"></script>
-    <script src="../js/listProducts.js"></script>
-    <script src="../js/addProduct.js"></script>
-    <script src="../js/updateProduct.js"></script>
-    <script src="../js/deleteProduct.js"></script>
-    <script src="../js/admin.js"></script>
-    <!-- <script src="../js/main.js"></script> -->
+    <div id="alert"
+        class=" w-96 h-64 justify-center font-navfont text-xl items-center bg-verde text-black fixed disappear">
+        <div class="w-96 text-center">
+            <p>El producto ya se encuentra en el sistema,<br> ¿Desea actualizarlo?</p><br>
+            <div class="justify-around w-96 flex"><button id="updateYes"
+                    class="alertOption bg-verde text-black hover:text-white">Si</button><button id="updateNo"
+                    class="alertOption bg-zinc-900 text-verde hover:text-white">No</button>
+            </div>
+        </div>
+
+        <script src="../js/base.js"></script>
+        <script src="../js/listProducts.js"></script>
+        <script src="../js/addProduct.js"></script>
+        <script src="../js/updateProduct.js"></script>
+        <script src="../js/deleteProduct.js"></script>
+        <script src="../js/admin.js"></script>
+        <!-- <script src="../js/main.js"></script> -->
 </body>
 
 </html>

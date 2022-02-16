@@ -1,5 +1,3 @@
-// Menu Administrador - productsList - dataList
-
 //Obtener nombre del producto y comprobar existencia del mismo
 
 function listProducts() {
@@ -22,7 +20,8 @@ function listProducts() {
         let idCompare = document.getElementById(cleanVar(productsList[i].name))
 
         if (idCompare) {
-            // Si existe no se muestra
+
+            // Si existe reemplaza el actual por variacion de valores
             continue
 
         } else {
