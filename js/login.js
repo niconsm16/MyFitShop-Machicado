@@ -1,6 +1,3 @@
-
-
-
 //# Login
 
 let form = document.getElementById('userLogin')

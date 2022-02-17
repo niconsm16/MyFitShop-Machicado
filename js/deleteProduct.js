@@ -54,24 +54,22 @@ function deleteProduct() {
             let a = productsList[i].name
             let b = productsList[i].price
             let c = productsList[i].stock
-
-
-
+            // Pregunta de borrado
             document.querySelector('#alert div p').innerHTML = 'Desea borrar el artículo:<br>' + a + '<br>(Precio: ' + b + ' - Stock: ' + c + ')'
-
             showAlert(noshow, show)
 
             const updateYes = document.getElementById('updateYes')
             const updateNo = document.getElementById('updateNo')
 
-            // Sí: Update / Ocultar Alert / Resetear Celdas
+            // Sí: Borra / Ocultar Alert / Resetear Celdas
             updateYes.onclick = () => {
                 // Utilizo Splice para borrar del Array
+                delRow = document.getElementById(cleanName)
                 delRow.remove()
                 productsList.splice(i, 1)
 
                 showAlert(show, noshow)
-
+                listProducts()
 
             }
 
@@ -79,9 +77,6 @@ function deleteProduct() {
             updateNo.onclick = () => {
                 showAlert(show, noshow)
             }
-
         }
     }
-
-    // listProducts()
 }

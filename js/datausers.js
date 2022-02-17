@@ -1,6 +1,6 @@
 alert(`USUARIOS:
 
-ADMIN:
+ADMIN: TOTALMENTE FUNCIONAL (Borren sin miedo, creen sin miedo, no pasa nada)
 user: admin
 pass: admin
 
