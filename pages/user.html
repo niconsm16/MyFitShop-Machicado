@@ -6,30 +6,528 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="src/images/favicon.ico">
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.webmanifest">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        verde: '#70D70C',
-                        verdetrans: 'rgba(114, 215, 12, 0.93)',
-                        gris: '#BABABA',
-                        gris2: '#3D3D3D',
-                    }
-                }
-            }
-        }
-    </script>
 
-    <title>MyFit Shop</title>
+    <!-- Icono Apple -->
+    <link rel="apple-touch-icon" href="/src/images/mobile/apple-touch-icon.png">
+
+    <!-- Meta tag -->
+    <meta name="description"
+        content="Tienda virtual de productos para la salud, el bienestar, veganos, celíacos. Amplia gama de artículos referidos al deporte y mantenimiento del cuerpo; compra online y recibilo en tu casa o pasa a nuestro local y conocé nuestro gimnasio!">
+    <!-- Meta tag Keywords -->
+    <meta name="keywords"
+        content="Gym, fit, gimnasio, Argentina, CABA, Barracas, La Boca, salud, comida, fitness, entrenamiento, vida sana, saludable, vegana, frutas, veganos, light, online. ">
+
+    <meta name="theme-color" content="#3D3D3D">
+
+    <!-- Icono Favicon -->
+    <link rel="shortcut icon" href="../src/images/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="My Fit Shop Barracas - CABA, Argentina">
+    <meta property="og:description"
+        content="Tienda virtual de artículos y productos sanos para los que deseen sentirse bien">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/niconsm16/Myfit-Machicado/master/src/images/mobile/apple-touch-icon.png">
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="152" />
+    <meta property="og:image:height" content="152" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- CSS adicional -->
+    <link rel="stylesheet" href="../css/shop.css">
+    <title>MyFit Shop - Tu tienda virtual saludable y Fit</title>
 </head>
 
 <body>
 
-    <h1>Holi soy user</h1>
+    <!-- MENU -->
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-black">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../src/images/myfitlogo3.webp" alt="Gimnasio Myfit"
+                        {width="244px" ; height="45px" ;}></a>
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 " style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarScrollingDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorias
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">Bebidas</a></li>
+                                <li><a class="dropdown-item" href="#">Proteínas</a></li>
+                                <li><a class="dropdown-item" href="#">Suplementos</a></li>
+                                <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="#">Alimentos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Todas las categorias</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link text-white bg-verde rounded px-2 py-1 mx-1 back-button"
+                                href="../index.html">Volver a
+                                MyFit</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-3 " type="search" placeholder="Ingrese el producto"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success bg-white" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <!-- NUEVOS INGRESOS  -->
+
+    <div class="container shadow-sm">
+        <div class="row justify-content-center">
+            <div class="bg-light pb-4 w-75 bg-gradient p-3">
+                <h3 class="text-center pt-4 py-1 text-uppercase bg-white pb-3 font-asap">Nuevos ingresos</h3>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../src/images/shop/bocaditos.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block  bg-opacity-50 bg-black">
+                                <h5>Masitas proteicas</h5>
+                                <p>Por encargo, consultar en informes</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/images/shop/kit2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block bg-opacity-50 bg-black">
+                                <h5>Kit mediano</h5>
+                                <p>Equipate para estar en forma este verano!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/images/shop/moras.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block bg-opacity-50 bg-black">
+                                <h5>Frutos rojos del Sur</h5>
+                                <p>Por tiempo limitado, consultá el tuyo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Comentarios -->
+
+            <div class="bg-light pb-4 w-25 bg-gradient p-2 displaycontents">
+                <h3 class="text-center pt-4 py-1 text-uppercase bg-white pb-3 font-asap centerblock">Ultimas reseñas
+                </h3>
+                <div class="list-group w-100">
+                    <a href="#" class="list-group-item list-group-item-action active bg-verde-imp border-light"
+                        aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Excelente calidad de verduras</h5>
+                            <small fs-1>2 hs</small>
+                        </div>
+                        <p class="mb-1">Llegaron en tiempo y forma</p>
+                        <small>Canasta de verduras $750</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Me gustó mucho el yogurte</h5>
+                            <small class="text-muted">5 hs</small>
+                        </div>
+                        <p class="mb-1">No sé de que sabor era, pero estaba rico</p>
+                        <small class="text-muted">Yogurte fresque $230</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Sabía a la abuela</h5>
+                            <small class="text-muted">1 día </small>
+                        </div>
+                        <p class="mb-1">No soy de comer esta comida</p>
+                        <small class="text-muted">Pizza vegana $800</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">El producto nunca llegó</h5>
+                            <small class="text-muted">1 día </small>
+                        </div>
+                        <p class="mb-1">Quedaron varados en algún lado</p>
+                        <small class="text-muted">Jugos gasificados $350</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Me hicieron el día!</h5>
+                            <small class="text-muted">2 días </small>
+                        </div>
+                        <p class="mb-1">Pensé que me iban a engordar, hasta el momento no...</p>
+                        <small class="text-muted">Masitas naturales $350</small>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Lo mas vendido -->
+
+    <h3 class="text-center mt-4 mb-3 text-uppercase font-asap">Lo + Vendido <a class="fs-6 text-decoration-none px-1"
+            href="#">(Ver
+            más)</a></h3>
+
+    <div class="d-xl-grid container-fluid justify-content-center p-1">
+        <div class="row justify-content-center text-lg-center">
+            <div class="col-10 pt-3 pb-3 bg-light rounded-3 shadow">
+
+
+                <div class="card-group gap-2 bg-light">
+                    <div class="card">
+                        <img src="../src/images/shop/cuerda.jpg" height="133.71px" class="card-img-top"
+                            alt="card-group-image">
+                        <div class="card-body bg-light">
+                            <h5 class="card-title fs-6 h-50">Cuerdas Profesionales</h5>
+                            <p class="card-text fs-5">$659.99</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Varios Colores</small>
+                        </div>
+                        <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="../src/images/shop/guantes.jpg" height="133.71px" class="card-img-top"
+                            alt="card-group-image">
+                        <div class="card-body">
+                            <h5 class="card-title fs-6 h-50">Guantes de Box</h5>
+                            <p class="card-text fs-5">$1399.99</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Varios Talles</small>
+                        </div>
+                        <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="../src/images/shop/kit.jpg" height="133.71px" class="card-img-top"
+                            alt="card-group-image">
+                        <div class="card-body">
+                            <h5 class="card-title fs-6 h-50">Kit Inicial Gym</h5>
+                            <p class="card-text fs-5">$3509.99</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">4 kits disponibles</small>
+                        </div>
+                        <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="../src/images/shop/secos.jpg" height="133.71px" class="card-img-top"
+                            alt="card-group-image">
+                        <div class="card-body">
+                            <h5 class="card-title fs-6 h-50">Frutos Secos</h5>
+                            <p class="card-text fs-5">$499.99</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">El Kg</small>
+                        </div>
+                        <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="../src/images/shop/yogurt.jpg" height="133.71px" class="card-img-top"
+                            alt="card-group-image">
+                        <div class="card-body">
+                            <h5 class="card-title fs-6 h-50">Yogurt Natural Proteico</h5>
+                            <p class="card-text fs-5">$349.99</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Por encargo</small>
+                        </div>
+                        <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Comida Sana -->
+
+        <h3 class="text-center mt-4 mb-3 text-uppercase font-asap">Solo de la naturaleza <a
+                class="fs-6 text-decoration-none px-1" href="#">(Ver
+                más)</a></h3>
+
+        <div class="d-xl-grid container-fluid justify-content-center p-4">
+            <div class="row justify-content-center text-lg-center">
+                <div class="col-10 pt-3 pb-3 bg-light rounded-3 shadow">
+
+
+                    <div class="card-group gap-2 bg-light">
+                        <div class="card">
+                            <img src="../src/images/shop/viandafresca.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body bg-light">
+                                <h5 class="card-title fs-6 h-50">Vianda Fresca</h5>
+                                <p class="card-text fs-5">$499.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Encargar</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/moras.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Moras Frescas</h5>
+                                <p class="card-text fs-5">$399.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Encargar</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/licuadosverdes.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Licuados Verdes</h5>
+                                <p class="card-text fs-5">$299.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Encargar</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/yogurt.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Yogurt Natural Proteico</h5>
+                                <p class="card-text fs-5">$259.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Por encargo</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/secos.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Frutos Secos</h5>
+                                <p class="card-text fs-5">$359.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">El Kg</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ultimos en stock -->
+
+        <h3 class="text-center mt-4 mb-3 text-uppercase font-asap">Ultimos en stock <a
+                class="fs-6 text-decoration-none px-1" href="#">(Ver
+                más)</a></h3>
+
+        <div class="d-xl-grid container-fluid justify-content-center p-1">
+            <div class="row justify-content-center text-lg-center">
+                <div class="col-10 pt-3 pb-3 bg-light rounded-3 shadow">
+
+
+                    <div class="card-group gap-2 bg-light">
+                        <div class="card">
+                            <img src="../src/images/shop/cuerda.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body bg-light">
+                                <h5 class="card-title fs-6 h-50">Cuerdas Profesionales</h5>
+                                <p class="card-text fs-5">$859.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Varios Colores</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+
+                        <div class="card">
+                            <img src="../src/images/shop/kit.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Kit Inicial Gym</h5>
+                                <p class="card-text fs-5">$3599.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">4 kits disponibles</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/guantes.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Guantes de Box</h5>
+                                <p class="card-text fs-5">$1399.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Varios Talles</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+
+                        <div class="card">
+                            <img src="../src/images/shop/secos.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Frutos Secos</h5>
+                                <p class="card-text fs-5">$359.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">El Kg</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/bocaditos.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Bocaditos Proteicos</h5>
+                                <p class="card-text fs-5">$499.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Consultar Stock</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Ultima semana en oferta -->
+
+        <h3 class="text-center mt-4 mb-3 text-uppercase font-asap">Ultima semana en oferta <a
+                class="fs-6 text-decoration-none px-1" href="#">(Ver
+                más)</a></h3>
+
+        <div class="d-xl-grid container-fluid justify-content-center p-1">
+            <div class="row justify-content-center text-lg-center">
+                <div class="col-10 pt-3 pb-3 bg-light rounded-3 shadow">
+
+
+                    <div class="card-group gap-2 bg-light">
+
+                        <div class="card">
+                            <img src="../src/images/shop/yogurt.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Yogurt Natural Proteico</h5>
+                                <p class="card-text fs-5">$0.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Por encargo</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/bocaditos.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Bocaditos Proteicos</h5>
+                                <p class="card-text fs-5">$0.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Consultar Stock</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/aceitenatural.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Aceite natural de oliva</h5>
+                                <p class="card-text fs-5">$0.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Consultar Stock</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/canastadeverduras.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Canasta de verduras</h5>
+                                <p class="card-text fs-5">$0.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Consultar Stock</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                        <div class="card">
+                            <img src="../src/images/shop/pizzavegana.jpg" height="133.71px" class="card-img-top"
+                                alt="card-group-image">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6 h-50">Pizza Vegana</h5>
+                                <p class="card-text fs-5">$0.99</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Por encargo</small>
+                            </div>
+                            <button type="button" class="btn btn-success bg-verde border-light">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Js Bootstrap Script -->
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous">
+            </script>
 
 </body>
 
