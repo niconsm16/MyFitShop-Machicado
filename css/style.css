@@ -116,3 +116,7 @@
     -ms-transition: all .5s;
     -o-transition: all .5s;
 }
+
+.main-min-h {
+    min-height: 91vh;
+}
