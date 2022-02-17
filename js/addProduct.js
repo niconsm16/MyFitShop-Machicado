@@ -1,5 +1,7 @@
 function addProduct() {
 
+    // Cargamos Update como template de modificación directa por selección y apañamos posibles bugs redirigidos desde borrar productos
+    updateProduct()
     // Mostrar Título
 
     currentTitle = 'option2'
