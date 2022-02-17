@@ -3,15 +3,17 @@
 const show = 'appear'
 const noshow = 'disappear'
 
-// Listado de Productos por defecto
-
-
-
 // Cambio de titulo
 
 function title(currentTitle) {
     titleSection = document.querySelector('#titleSection h2')
     titleSection.innerHTML = (document.getElementById(currentTitle)).innerHTML.toUpperCase()
+}
+
+// Cambio de colores de títulos
+function changeCTitle(currentColor, remove1, remove2) {
+    document.querySelector('#titleSection h2').classList.remove(remove1, remove2)
+    document.querySelector('#titleSection h2').classList.add(currentColor)
 }
 
 // Menu Agregar Producto

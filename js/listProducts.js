@@ -6,6 +6,10 @@ function listProducts() {
     currentTitle = 'option1'
     title(currentTitle)
 
+
+    // Cambio de color de fondo de título
+    changeCTitle('bg-verde', 'bg-yellow-400', 'bg-red-600')
+
     // Ocultar Add Product
     showAddProduct(show, noshow)
 

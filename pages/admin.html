@@ -79,16 +79,16 @@
                     <input id="nameProduct" name="nameProduct" type="text" required
                         class="w-full text-center appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                         placeholder="Ingrese el nombre del producto">
-                    <input id="priceProduct" name="priceProduct" type="number" required
+                    <input id="priceProduct" name="priceProduct" type="number" min="1" required
                         class="w-full text-center appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                         placeholder="Ingrese el precio de venta">
-                    <input id="stockProduct" name="stockProduct" type="number" required
+                    <input id="stockProduct" name="stockProduct" type="number" min="1" required
                         class="w-full text-center appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                         placeholder="Ingrese la cantidad de unidades">
                 </div>
                 <div class="text-center">
                     <button id='addButton' type="submit" class="w-auto mt-4 text-center py-2 px-4 border-0 border-zinc-900 text-sm font-medium rounded-md
-                        text-verde bg-zinc-900 hover:bg-zinc-900 hover:text-white focus:outline-none focus:ring-2
+                        bg-zinc-900 hover:bg-zinc-900 focus:outline-none focus:ring-2
                         focus:ring-offset-2 focus:ring-indigo-500 transition">Agregar Producto</button>
                 </div>
             </form>
@@ -111,7 +111,7 @@
     <div id="alert"
         class=" w-96 h-64 justify-center font-navfont text-xl items-center bg-verde text-black fixed disappear">
         <div class="w-96 text-center">
-            <p>El producto ya se encuentra en el sistema,<br> ¿Desea actualizarlo?</p><br>
+            <p>El producto ya se encuentra en el sistema<br> ¿Desea actualizarlo?</p><br>
             <div class="justify-around w-96 flex"><button id="updateYes"
                     class="alertOption bg-verde text-black hover:text-white">Si</button><button id="updateNo"
                     class="alertOption bg-zinc-900 text-verde hover:text-white">No</button>
