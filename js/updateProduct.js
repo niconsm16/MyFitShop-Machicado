@@ -10,6 +10,9 @@ function updateProduct() {
     // Ocultar Formulario
     showAddProduct(show, noshow)
 
+    // Mostrar Leyenda de Seleccion
+    LegendSelect()
+
 
     // Vaciamos tabla existente salvo tr descriptivo
 

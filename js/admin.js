@@ -16,6 +16,15 @@ function changeCTitle(currentColor, remove1, remove2) {
     document.querySelector('#titleSection h2').classList.add(currentColor)
 }
 
+// Creación de Leyenda de Seleccion
+function LegendSelect() {
+    let legendSel = document.getElementById('legendSel')
+    if (legendSel) { legendSel.remove() }
+    let legendBefore = document.getElementById('dataList')
+    legendBefore.insertAdjacentHTML('beforebegin', '<div id="legendSel" class="mt-4 w-fit bg-gray-300 mx-auto rounded px-2">Seleccione un producto del menú</div>')
+}
+
+
 // Menu Agregar Producto
 const showAddProduct = (a, b) => { document.getElementById('createProduct').classList.replace(a, b) }
 

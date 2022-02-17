@@ -10,6 +10,8 @@ function deleteProduct() {
     // Ocultar Formulario
     showAddProduct(show, noshow)
 
+    // Mostrar leyenda de Selección
+    LegendSelect()
 
     // Vaciamos tabla existente salvo tr descriptivo
 

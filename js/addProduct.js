@@ -17,14 +17,8 @@ function addProduct() {
     document.querySelector('#addButton').classList.add('hover:text-white')
     document.getElementById('addButton').innerHTML = 'Agregar Producto'
 
-    // Chequeamos color de hover de lista
-    showAddProduct(noshow, show)
-    for (n in productsList) {
-        a = document.querySelector(`#${cleanVar(productsList[n].name)} div`)
-        a.classList.replace('hover:bg-red-600', 'hover:bg-verde')
-    }
     // Mostrar Formulario
-
+    showAddProduct(noshow, show)
     resetFields()
 
 

@@ -6,12 +6,15 @@ function listProducts() {
     currentTitle = 'option1'
     title(currentTitle)
 
-
     // Cambio de color de fondo de título
     changeCTitle('bg-verde', 'bg-yellow-400', 'bg-red-600')
 
     // Ocultar Add Product
     showAddProduct(show, noshow)
+
+    //Borrar Leyenda de Seleccion
+    let legendSel = document.getElementById('legendSel')
+    if (legendSel) { legendSel.remove() }
 
     // Creacion de tabla
 
