@@ -44,21 +44,25 @@
         <nav class="self-center w-1/2">
             <ul class="flex flex-row font-navfont text-sm text-zinc-400 ">
                 <li>
-                    <button class="px-3 text-zinc-400 hover:text-zinc-100" id="option1">Listado de Productos</button>
+                    <button class="px-3 text-zinc-400 hover:text-zinc-100 transition" id="option1">Listado de
+                        Productos</button>
                 </li>|
                 <li>
-                    <button class="px-3 text-zinc-400 hover:text-zinc-100" id="option2">Agregar Producto</button>
+                    <button class="px-3 text-zinc-400 hover:text-zinc-100 transition" id="option2">Agregar
+                        Producto</button>
                 </li>|
                 <li>
-                    <button class="px-3 text-zinc-400 hover:text-zinc-100" id="option3">Actualizar Producto</button>
+                    <button class="px-3 text-zinc-400 hover:text-zinc-100 transition" id="option3">Actualizar
+                        Producto</button>
                 </li>|
                 <li>
-                    <button class="px-3 text-zinc-400 hover:text-zinc-100" id="option4">Borrar Producto</button>
+                    <button class="px-3 text-zinc-400 hover:text-zinc-100 transition" id="option4">Borrar
+                        Producto</button>
                 </li>
             </ul>
         </nav>
         <div class="bg-verde px-2 self-center w-auto absolute right-0 h-auto rounded mr-4 text-sm py-1 font-bold">
-            <a href="../index.html" id="logout" class="text-black hover:text-white antialiased">Logout</a>
+            <a href="../index.html" id="logout" class="text-black hover:text-white antialiased transition">Logout</a>
         </div>
     </header>
 
@@ -85,17 +89,17 @@
                 <div class="text-center">
                     <button id='addButton' type="submit" class="w-auto mt-4 text-center py-2 px-4 border-0 border-zinc-900 text-sm font-medium rounded-md
                         text-verde bg-zinc-900 hover:bg-zinc-900 hover:text-white focus:outline-none focus:ring-2
-                        focus:ring-offset-2 focus:ring-indigo-500">Agregar Producto</button>
+                        focus:ring-offset-2 focus:ring-indigo-500 transition">Agregar Producto</button>
                 </div>
             </form>
 
-            <table id="dataList" class="w-full mt-4">
-                <tr class="w-full bg-black text-zinc-100">
-                    <td class="w-3/5">Nombre</td>
-                    <td class="w-1/5">Precio</td>
-                    <td class="w-1/5">Stock</td>
-                </tr>
-            </table>
+            <div id="dataList" class="w-full mt-4">
+                <div class="w-full bg-black text-zinc-100 flex">
+                    <span class="w-3/5 inline-block">Nombre</span>
+                    <span class="w-1/5 inline-block">Precio</span>
+                    <span class="w-1/5 inline-block">Stock</span>
+                </div>
+            </div>
         </div>
     </main>
 

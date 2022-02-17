@@ -26,20 +26,21 @@ function listProducts() {
         }
 
         // Si no existe se crea su respectiva fila con sus datos
-        let tr = document.createElement('tr')
-        tr.id = cleanVar(productsList[i].name)
+        let divtr = document.createElement('div')
+        divtr.id = cleanVar(productsList[i].name)
+        divtr.className = 'flex'
 
         if (i % 2 == 0) {
 
-            tr.innerHTML = `<td class="w-3/5 bg-zinc-200">${productsList[i].name}</td><td class="w-1/5 bg-zinc-200">${productsList[i].price}</td><td class="w-1/5 bg-zinc-200">${productsList[i].stock}</td>`
+            divtr.innerHTML = `<span class="w-3/5 inline-block bg-zinc-200">${productsList[i].name}</span><span class="w-1/5 inline-block bg-zinc-200">${productsList[i].price}</span><span class="w-1/5 inline-block bg-zinc-200">${productsList[i].stock}</span>`
 
-            table.appendChild(tr)
+            table.appendChild(divtr)
 
         } else {
 
-            tr.innerHTML = `<td class="w-3/5 bg-zinc-300">${productsList[i].name}</td><td class="w-1/5 bg-zinc-300">${productsList[i].price}</td><td class="w-1/5 bg-zinc-300">${productsList[i].stock}</td>`
+            divtr.innerHTML = `<span class="w-3/5 inline-block bg-zinc-300">${productsList[i].name}</span><span class="w-1/5 inline-block bg-zinc-300">${productsList[i].price}</span><span class="w-1/5 inline-block bg-zinc-300">${productsList[i].stock}</span>`
 
-            table.appendChild(tr)
+            table.appendChild(divtr)
         }
 
     }

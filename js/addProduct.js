@@ -9,6 +9,8 @@ function addProduct() {
 
     showAddProduct(noshow, show)
 
+    // Obtengo datos del formulario
+
     let form = document.getElementById('createProduct')
     // Agregar Producto
     form.onsubmit = receiveProduct.bind(form)
@@ -73,6 +75,7 @@ function addProduct() {
 
     }
 }
+
 function resetFields() {
 
     document.getElementById('nameProduct').value = ''

@@ -107,3 +107,12 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+
+.selUpdProduct:hover {
+    background-color: var(--verde);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
