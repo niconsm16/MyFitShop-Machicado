@@ -55,3 +55,5 @@ productsList.push(p5)
 let p6 = new Product('PIRULINOS', 5, 300)
 productsList.push(p6)
 
+let p7 = new Product('PONCHO ROSA', 2, 8000)
+productsList.push(p7)
