@@ -11,38 +11,50 @@
     --gris2: #3D3D3D;
     --asap: 'Asap Condensed', sans-serif;
     --bigshoulders: 'Big Shoulders Text', cursive;
+    --poppins: 'Poppins', sans-serif;
 }
 
 .bg-verde {
     background: var(--verde);
 }
+
+.poppins {
+    font-family: var(--poppins);
+}
+
+.asap {
+    font-family: 'Asap Condensed', sans-serif;
+}
+
 .back-button:hover {
-    background-color: white;
-    text-shadow: 0 0 3px rgba(0,0,0,9%);
+    color: white !important;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 9%);
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
 }
 
 .bg-verde-imp {
     background-color: var(--verde) !important;
 }
+
 .displaycontents {
     display: block;
 }
+
 .nav-item .text-white:hover {
-    color: var(--verde)!important;
+    color: var(--verde) !important;
 }
+
 .d-flex .bg-white:hover {
     background-color: var(--verde) !important;
 }
+
 .dropdown-item:hover {
-    color:white;
+    color: white;
     background-color: var(--verde);
-}
-.font-asap {
-    font-family: 'Asap Condensed', sans-serif;
-    ;
-}
-.font-poppins {
-    font-family: 'Poppins', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -58,8 +70,8 @@ body::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.dropdown-item:hover::after{
-    content:"Próximamente!";
+.dropdown-item:hover::after {
+    content: "Próximamente!";
     background-color: black;
     color: #70D70C;
     padding: .1em .5em;
@@ -72,15 +84,20 @@ body::-webkit-scrollbar-track {
     -o-border-radius: 7px;
 }
 
+.results {
+    min-height: 82vh;
+}
+
 /* MEDIAQUERIES */
 
 @media only screen and (max-width:1184px) {
 
-.displaycontents {
-    display: contents;
-    width: 75%!important;
-}
-.centerblock {
-padding: 0 5%;
-}
+    .displaycontents {
+        display: contents;
+        width: 75% !important;
+    }
+
+    .centerblock {
+        padding: 0 5%;
+    }
 }
