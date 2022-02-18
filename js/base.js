@@ -36,24 +36,24 @@ let product
 let productSelected
 
 // Datos prueba
-
+//0
 let p1 = new Product('GAS', 20, 200)
 productsList.push(p1)
-
+//1
 let p2 = new Product('JUGO', 10, 100)
 productsList.push(p2)
-
+//2
 let p3 = new Product('GALLETAS', 100, 20)
 productsList.push(p3)
-
+//3
 let p4 = new Product('BOLEADORAS', 250, 5)
 productsList.push(p4)
-
+//4
 let p5 = new Product('PONCHO ZARPADO', 1000, 2)
 productsList.push(p5)
-
+//5
 let p6 = new Product('PIRULINOS', 5, 300)
 productsList.push(p6)
-
+//6
 let p7 = new Product('PONCHO ROSA', 2, 8000)
 productsList.push(p7)

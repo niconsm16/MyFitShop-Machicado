@@ -6,7 +6,8 @@ user: admin
 pass: admin
 
 USER:
-Diseñada primer interfaz, con buscador funcional
+Diseñada primer interfaz
+BUSCADOR TOTALMENTE FUNCIONAL (Resultados parciales/completos)
 (items precargados: gas, jugo, galletas, poncho zarpado, etc.)
 user: cualquier cosa
 pass: cualquier cosa`)
