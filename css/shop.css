@@ -23,7 +23,7 @@
 }
 
 .asap {
-    font-family: 'Asap Condensed', sans-serif;
+    font-family: 'Asap Condensed', sans-serif !important;
 }
 
 .back-button:hover {

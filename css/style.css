@@ -5,6 +5,9 @@
     --verde: #70D70C;
 }
 
+.asap {
+    font-family: var(--asap);
+}
 
 .lunita {
     width: 10em;
