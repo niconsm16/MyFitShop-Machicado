@@ -5,126 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="shortcut icon" href="src/images/favicon.ico">
-
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        verde: '#70D70C',
-                        verdetrans: 'rgba(114, 215, 12, 0.93)',
-                        gris: '#BABABA',
-                        gris2: '#3D3D3D',
-                    },
-                }
-            }
-        }
-    </script>
-
-    <title>MyFit Shop</title>
+    <script src="./js/checklog.js"></script>
+    <title>Document</title>
 </head>
 
 <body>
 
-
-    <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-md w-full space-y-8">
-            <div>
-                <img id="logo" class="mx-auto h-24 w-auto"
-                    src="https://raw.githubusercontent.com/niconsm16/Myfit-Machicado/master/src/images/myfitlogo.webp"
-                    alt="Workflow">
-
-                <h2 id="signin" class="mt-8 text-center text-3xl font-extrabold text-gray-900">
-                    Ingresa a tu cuenta
-                </h2>
-                <p id="signup" class="mt-2 text-center text-sm text-gray-600">
-                    No tenés cuenta?
-                    <a href="#" id='regHere' class="font-medium text-green-600 hover:text-verde">
-                        registrate acá!
-                    </a>
-                </p>
-            </div>
-
-            <form id="userLogin" class="mt-8 space-y-6">
-                <input type="hidden" name="remember" value="true">
-                <div class="rounded-md shadow-sm -space-y-px">
-                    <div>
-                        <label for="username" class="sr-only">Ingresa tu usuario/correo electrónico</label>
-                        <input id="username" name="username" type="text" required
-                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Ingresá tu usuario/correo electrónico">
-                    </div>
-                    <div>
-                        <label for="password" class="sr-only">Ingresá tu contraseña</label>
-                        <input id="password" name="password" type="password" autocomplete="current-password" required
-                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Ingresá tu contraseña">
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center">
-                        <input id="remember-me" name="remember-me" type="checkbox"
-                            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                        <label id='remember2' for="remember-me" class="ml-2 block text-sm text-gray-900">
-                            Recuérdame
-                        </label>
-                    </div>
-
-                    <div class="text-sm">
-                        <a href="#" id='forgetPass' class="font-medium text-green-600 hover:text-verde">
-                            Olvidaste tu contraseña?
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <button type="submit" id="submit"
-                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-verde hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-                            <!-- Heroicon name: solid/lock-closed -->
-                            <svg class="h-5 w-5 text-white group-hover:text-black" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                        Ingresar
-                    </button>
-                </div>
-
-                <div class="text-center pt-6">
-                    <button id='button' value='0' type="button" class="w-auto text-center py-2 px-4 border-0 border-zinc-900 text-sm font-medium rounded-md
-                        text-white bg-zinc-600 hover:bg-gradient-to-r from-violet-600 to-zinc-900 focus:outline-none focus:ring-2
-                        focus:ring-offset-2 focus:ring-indigo-500">Probá
-                        la versión nocturna</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- <script type="text/javascript">
-        function downloadJSAtOnload() {
-            var element = document.createElement("script");
-            element.src = "./js/datausers.js";
-            document.body.appendChild(element);
-        }
-        if (window.addEventListener)
-            window.addEventListener("load", downloadJSAtOnload, false);
-        else if (window.attachEvent)
-            window.attachEvent("onload", downloadJSAtOnload);
-        else window.onload = downloadJSAtOnload;
-    </script> -->
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/datausers.js"></script>
-    <script src="./js/login.js"></script>
-    <script src="./js/darktheme.js"></script>
+    <script src="./js/runLog.js"></script>
 </body>
 
 </html>
