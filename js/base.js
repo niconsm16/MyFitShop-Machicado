@@ -40,53 +40,56 @@ let productSelected
 let p1 = new Product('GAS', 20, 200)
 productsList.push(p1)
 //1
-let p2 = new Product('JUGO', 10, 100)
-productsList.push(p2)
+p1 = new Product('JUGO', 10, 100)
+productsList.push(p1)
 //2
-let p3 = new Product('GALLETAS', 100, 20)
-productsList.push(p3)
+p1 = new Product('GALLETAS', 100, 20)
+productsList.push(p1)
 //3
-let p4 = new Product('BOLEADORAS', 250, 5)
-productsList.push(p4)
+p1 = new Product('BOLEADORAS', 250, 5)
+productsList.push(p1)
 //4
-let p5 = new Product('PONCHO ZARPADO', 1000, 2)
-productsList.push(p5)
+p1 = new Product('PONCHO ZARPADO', 1000, 2)
+productsList.push(p1)
 //5
-let p6 = new Product('PIRULINOS', 5, 300)
-productsList.push(p6)
+p1 = new Product('PIRULINOS', 5, 300)
+productsList.push(p1)
 //6
-let p7 = new Product('PONCHO ROSA', 2, 8000)
-productsList.push(p7)
+p1 = new Product('PONCHO ROSA', 2, 8000)
+productsList.push(p1)
 
-let p8 = new Product('CUERDAS PROFESIONALES', 15, 659)
-productsList.push(p8)
+p1 = new Product('CUERDAS PROFESIONALES', 659.99, 10)
+productsList.push(p1)
 
-let p9 = new Product('GUANTES DE BOX', 5, 1399)
-productsList.push(p9)
+p1 = new Product('GUANTES DE BOX', 1399.99, 8)
+productsList.push(p1)
 
-let p10 = new Product('KIT INICIAL GYM', 4, 3509)
-productsList.push(p10)
+p1 = new Product('KIT INICIAL GYM', 3509, 99, 4)
+productsList.push(p1)
 
-let p11 = new Product('FRUTOS SECOS', 20, 499)
-productsList.push(p11)
+p1 = new Product('FRUTOS SECOS', 499.99, 5)
+productsList.push(p1)
 
-let p12 = new Product('YOGURT NATURAL PROTEICO', 2, 349)
-productsList.push(p12)
+p1 = new Product('YOGURT NATURAL PROTEICO', 349.99, 2)
+productsList.push(p1)
 
-let p13 = new Product('VIANDA FRESCA', 9, 499)
-productsList.push(p13)
+p1 = new Product('VIANDA FRESCA', 499.99, 6)
+productsList.push(p1)
 
-let p14 = new Product('MORAS FRESCAS', 5, 399)
-productsList.push(p14)
+p1 = new Product('MORAS FRESCAS', 399.99, 8)
+productsList.push(p1)
 
-let p15 = new Product('BOCADITOS PROTEICOS', 11, 499)
-productsList.push(p15)
+p1 = new Product('BOCADITOS PROTEICOS', 499.99, 60)
+productsList.push(p1)
 
-let p16 = new Product('ACEITE NATURAL DE OLIVA', 1, 0.99)
-productsList.push(p16)
+p1 = new Product('ACEITE NATURAL DE OLIVA', 0.99, 1)
+productsList.push(p1)
 
-let p17 = new Product('CANASTA DE VERDURAS', 5, 0.99)
-productsList.push(p17)
+p1 = new Product('CANASTA DE VERDURAS', 0.99, 5)
+productsList.push(p1)
 
-let p18 = new Product('PIZZA VEGANA', 2, 0.99)
-productsList.push(p18)
+p1 = new Product('PIZZA VEGANA', 45.99, 8)
+productsList.push(p1)
+
+p1 = new Product('CHORIZOS JUGOSOS', 999.99, 9)
+productsList.push(p1)
