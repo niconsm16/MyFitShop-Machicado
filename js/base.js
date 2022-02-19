@@ -57,3 +57,36 @@ productsList.push(p6)
 //6
 let p7 = new Product('PONCHO ROSA', 2, 8000)
 productsList.push(p7)
+
+let p8 = new Product('CUERDAS PROFESIONALES', 15, 659)
+productsList.push(p8)
+
+let p9 = new Product('GUANTES DE BOX', 5, 1399)
+productsList.push(p9)
+
+let p10 = new Product('KIT INICIAL GYM', 4, 3509)
+productsList.push(p10)
+
+let p11 = new Product('FRUTOS SECOS', 20, 499)
+productsList.push(p11)
+
+let p12 = new Product('YOGURT NATURAL PROTEICO', 2, 349)
+productsList.push(p12)
+
+let p13 = new Product('VIANDA FRESCA', 9, 499)
+productsList.push(p13)
+
+let p14 = new Product('MORAS FRESCAS', 5, 399)
+productsList.push(p14)
+
+let p15 = new Product('BOCADITOS PROTEICOS', 11, 499)
+productsList.push(p15)
+
+let p16 = new Product('ACEITE NATURAL DE OLIVA', 1, 0.99)
+productsList.push(p16)
+
+let p17 = new Product('CANASTA DE VERDURAS', 5, 0.99)
+productsList.push(p17)
+
+let p18 = new Product('PIZZA VEGANA', 2, 0.99)
+productsList.push(p18)
