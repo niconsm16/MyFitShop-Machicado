@@ -177,6 +177,7 @@
     100% {
         opacity: 0;
         color: transparent;
+        display: none;
     }
 }
 
