@@ -27,10 +27,14 @@ function userType(e) {
     // Comprobación de usuario
 
     if ((b.value === "admin") && (c.value === "admin")) {
+        // Si no existe stock en SessionStorage entonces se lo crea y se pasa la carga predefinida al mismo
+        if (!sessionStorage.getItem('stockATM')) { sessionStorage.setItem('stockATM', JSON.stringify(productsList)) }
         // Una forma de redirección .replace()
         location.replace("../pages/admin.html")
+
     } else {
-        // Otra forma de redirección href =
+
+        // Otra forma de redirección href
         location.href = "../pages/user.html"
     }
     // Almaceno en memoria al user para mantener sesión abierta hasta que él cliquee en logout, navegador cerrado mantiene valores

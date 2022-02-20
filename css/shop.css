@@ -102,6 +102,10 @@ body::-webkit-scrollbar-track {
     }
 }
 
+.r-21 {
+    right: 21em;
+}
+
 .wrongToastify {
     z-index: 30;
     position: fixed;

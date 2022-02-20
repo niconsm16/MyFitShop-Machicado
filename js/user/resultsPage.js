@@ -122,4 +122,4 @@ if (notFound) {
 }
 
 // Limpio el sessionstorage
-sessionStorage.clear()
+sessionStorage.removeItem('searchKey')
