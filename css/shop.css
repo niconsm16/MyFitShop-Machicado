@@ -101,3 +101,63 @@ body::-webkit-scrollbar-track {
         padding: 0 5%;
     }
 }
+
+.wrongToastify {
+    z-index: 30;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.2em 0;
+    animation: errorT 1s linear 0s 1;
+    -webkit-animation: errorT 5s linear 0s 1;
+}
+
+@keyframes errorT {
+    0% {
+        opacity: 0;
+        background-color: transparent;
+        color: transparent;
+    }
+
+    10% {
+        opacity: 100;
+        background-color: red;
+        color: white;
+    }
+
+    30% {
+        opacity: 100;
+        background-color: red;
+        color: white;
+    }
+
+    40% {
+        opacity: 100;
+        background-color: var(--verde);
+        color: black;
+        top: 15px;
+    }
+
+    65% {
+        opacity: 100;
+        background-color: var(--verde);
+        color: black;
+        top: 15px;
+    }
+
+    80% {
+        top: 0;
+        opacity: 0%;
+        background-color: transparent;
+        color: transparent;
+    }
+
+    100% {
+        opacity: 0;
+        color: transparent;
+    }
+}
+
+.swal2-container {
+    z-index: 4 !important;
+}

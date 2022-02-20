@@ -1,3 +1,5 @@
+
+
 // Variables
 
 const show = 'appear'
@@ -55,3 +57,5 @@ let select4 = document.getElementById('option4')
 select4.onclick = () => { deleteProduct() }
 
 listProducts()
+// Mensaje de alerta si se trató de ingresar a otra página
+toastError()

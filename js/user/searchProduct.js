@@ -15,6 +15,6 @@ function showResult(e) {
 
     // Redirecciono a Results.html
     location.replace("./results.html")
-
-
 }
+
+toastError()

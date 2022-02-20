@@ -1,2 +1,5 @@
 let logoutbtn = document.getElementById('logout')
-logoutbtn.onclick = () => { localStorage.clear() } 
+logoutbtn.onclick = () => {
+    localStorage.clear()
+
+} 

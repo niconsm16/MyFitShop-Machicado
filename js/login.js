@@ -1,6 +1,9 @@
 //# Login
 
 // Mensaje de alerta si se trató de ingresar a otra página
+toastError()
+
+// Si se trata de acceder al login desde un usuario ya logueado redirecciona a su respectiva página
 
 if ((localStorage.getItem('myfitusr')) !== null) {
     checklog()
