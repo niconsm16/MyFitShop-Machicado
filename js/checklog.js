@@ -9,7 +9,7 @@ function checklog() {
 
     if (sessionExists == null) {
 
-        if ((recogPath === '/pages/admin.html') || (recogPath === '/pages/user.html') || (recogPath === '/pages/results.html')) {
+        if ((recogPath === "/pages/admin.html") || (recogPath === "/pages/user.html") || (recogPath === "/pages/results.html")) {
             // Preparo el toastify para avisar del error
             sessionStorage.setItem('wrongAccess', true)
             // Si la key no existe (null) y trato de entrar a la sección admin o usuarios me redirecciona a login
@@ -27,14 +27,14 @@ function checklog() {
         // Si soy Admin...
         if ((b === "admin") && (c === "admin")) {
 
-            if ((recogPath === '/pages/user.html') || (recogPath === '/pages/login.html') || (recogPath === '/pages/results.html') || (recogPath === '/index.html')) {
+            if ((recogPath === "/pages/user.html") || (recogPath === "/pages/login.html") || (recogPath === "/pages/results.html") || (recogPath === "/index.html")) {
                 // Preparo el toastify para avisar del error
                 sessionStorage.setItem('wrongAccess', true)
                 // Si el usuario es admin y trata de ingresar a user lo devuelvo a su sección
                 location.replace("../pages/admin.html")
             }
 
-        } else if ((recogPath === '/pages/admin.html') || (recogPath === '/pages/login.html') || (recogPath === '/index.html')) {
+        } else if ((recogPath === "/pages/admin.html") || (recogPath === "/pages/login.html") || (recogPath === "/index.html")) {
             // Preparo el toastify para avisar del error
             sessionStorage.setItem('wrongAccess', true)
             // Si es un usuario random y trata de ingresar al admin lo devuelvo a su sección
