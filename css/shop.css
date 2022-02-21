@@ -106,6 +106,20 @@ body::-webkit-scrollbar-track {
     right: 21em;
 }
 
+.card-body {
+    padding: 0.6rem 0.4rem 1rem;
+}
+
+.title-card {
+    font-size: 0.8rem;
+}
+
+.h6em {
+    height: 5em;
+}
+
+/*# Librerias */
+
 .wrongToastify {
     z-index: 30;
     position: fixed;

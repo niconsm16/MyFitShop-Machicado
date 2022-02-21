@@ -13,6 +13,7 @@ class Carrito {
         this.product = product
         this.amount = amount
         this.partial = partial
+
     }
 }
 
