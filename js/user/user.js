@@ -12,11 +12,7 @@ function cartIconShow() {
     let colc = 'bg-black'
     let cold = 'text-white'
 
-    if (cart.length === 0) {
-        cartCColor(cartItemsCount, cola, colb, colc, cold)
-    } else {
-        cartCColor(cartItemsCount, colc, cold, cola, colb)
-    }
+    cart.length === 0 ? cartCColor(cartItemsCount, cola, colb, colc, cold) : cartCColor(cartItemsCount, colc, cold, cola, colb)
 } cartIconShow()
 
 

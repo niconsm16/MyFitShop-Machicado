@@ -30,6 +30,13 @@
     font-family: 'Asap Condensed', sans-serif !important;
 }
 
+.stickytop {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
 .back-button:hover {
     color: white !important;
     text-shadow: 0 0 3px rgba(0, 0, 0, 9%);
@@ -130,8 +137,8 @@ body::-webkit-scrollbar-track {
     width: 100%;
     text-align: center;
     padding-top: 0.2em 0;
-    animation: errorT 1s linear 0s 1;
-    -webkit-animation: errorT 5s linear 0s 1;
+    animation: errorT 2.5s linear 0s 1;
+    -webkit-animation: errorT 2.5s linear 0s 1;
 }
 
 @keyframes errorT {

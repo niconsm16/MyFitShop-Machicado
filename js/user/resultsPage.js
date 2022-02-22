@@ -10,6 +10,7 @@ if (searchKey.length >= 3) {
 
     // Primero Busco coincidencia exacta
     productsList.forEach(n => {
+
         if (searchKey.toUpperCase() === n.name) {
 
             // Me posiciono donde se agregarán los resultados

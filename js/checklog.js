@@ -47,7 +47,7 @@ function checklog() {
 function checklogWrongPup() {
     Toastify({
         text: "No tienes acceso a ese sitio",
-        duration: 3200,
+        duration: 2000,
         close: false,
         gravity: "top", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`

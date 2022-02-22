@@ -14,7 +14,7 @@ function listProducts() {
 
     //Borrar Leyenda de Seleccion
     let legendSel = document.getElementById('legendSel')
-    if (legendSel) { legendSel.remove() }
+    legendSel && legendSel.remove()
 
     // Creacion de tabla
 
@@ -26,11 +26,9 @@ function listProducts() {
 
         let idCompare = document.getElementById(cleanVar(productsList[i].name))
 
-        if (idCompare) {
+        // Si existe remover de la lista para actualizar
+        idCompare && idCompare.remove()
 
-            // Si existe remover de la lista para actualizar
-            idCompare.remove()
-        }
 
         // Si no existe se crea su respectiva fila con sus datos
         let divtr = document.createElement('div')

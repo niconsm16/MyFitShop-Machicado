@@ -5,9 +5,7 @@ toastError()
 
 // Si se trata de acceder al login desde un usuario ya logueado redirecciona a su respectiva página
 
-if ((localStorage.getItem('myfitusr')) !== null) {
-    checklog()
-}
+localStorage.getItem('myfitusr') !== null && checklog()
 
 // Obtengo datos del formulario
 
