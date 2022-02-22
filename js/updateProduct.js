@@ -14,7 +14,7 @@ function updateProduct() {
     LegendSelect()
 
 
-    // Vaciamos tabla existente salvo tr descriptivo
+    // Vaciamos tabla existente salvo div descriptivo
 
     let table = document.getElementById('dataList')
 

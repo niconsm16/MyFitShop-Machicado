@@ -29,7 +29,7 @@ if (searchKey.length >= 3) {
                 <div class="card-footer">
                     <small class="text-muted">Stock: ${n.stock} u.</small>
                 </div>
-                <button id="box1-${cleanVar(n.name)}" type="button" class="btn btn-success bg-verde border-light">Comprar</button>`
+                <button type="button" onclick="productsList[${productsList.indexOf(n)}].addToCart()" class="btn btn-success bg-verde border-light">Comprar</button>`
 
             //`<div class="w-50" id="${cleanVar(n.name)}">${n.name}</div><div class="w-25">${n.price}</div><div class="w-25">${n.stock}</div>`
 
@@ -37,6 +37,7 @@ if (searchKey.length >= 3) {
             results.append(result)
             // Aviso al sistema que se encontró al menos un resultado
             notFound = false
+
         }
     })
 
@@ -94,7 +95,7 @@ if (searchKey.length >= 3) {
                 <div class="card-footer">
                     <small class="text-muted">Stock: ${n.stock} u.</small>
                 </div>
-                <button id="box1-${cleanVar(n.name)}" type="button" class="btn btn-success bg-verde border-light">Comprar</button>`
+                <button type="button" onclick="productsList[${productsList.indexOf(n)}].addToCart()" class="btn btn-success bg-verde border-light">Comprar</button>`
 
                                 // Agrego el valor
                                 results.append(result)

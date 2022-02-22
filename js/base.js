@@ -1,3 +1,8 @@
+//Arreglos
+
+let productsList = []
+let cart = []
+
 // Clases
 
 class Product {
@@ -5,15 +10,36 @@ class Product {
         this.name = product
         this.price = price
         this.stock = amount
+        this.addToCart = function (a = 1) {
+            // Busco si el producto ingresado ya existe en el carrito (array cart)
+            let found = cart.find(n => n.product === this.name)
+            // Si no existe y devuelve undefined entonces ingreso el producto, si existe aumento la cantidad de productos adquiridos
+            found == undefined ? cart.push(new Carrito(this.name, a, this.price)) : found.amount++
+            // actualizo el número del icono Carrito
+            cartIconShow()
+        }
+
     }
 }
 
 class Carrito {
-    constructor(product, amount, partial) {
+    constructor(product, amount, price) {
         this.product = product
         this.amount = amount
-        this.partial = partial
+        this.price = price
 
+        this.addToCart = function () {
+            // Sumo una cantidad
+            this.amount++
+        }
+        this.removeToCart = function () {
+            // Si la cantidad es mayor a 1 le resto un valor, sino borro el elemento del carrito
+            this.amount > 1 ? this.amount-- : cart.splice(this, 1)
+        }
+        this.delToCart = function () {
+            //Borra el producto del carrito
+            cart.splice(this, 1)
+        }
     }
 }
 
@@ -26,10 +52,6 @@ const cl = (a) => { return console.log(a) }
 const cleanOption = (a) => { return a.trim().toLowerCase() }
 const cleanVar = (a) => { return a.replace(/\s/g, '').toLowerCase() }
 
-//Arreglos
-
-let productsList = []
-let cart = []
 
 // Variables
 
@@ -42,13 +64,13 @@ let productSelected
 if (sessionStorage.getItem('stockATM') === null) {
 
     // Entonces creo stock de prueba
-    let p1 = new Product('GAS', 20, 200)
+    let p1 = new Product('GAS', 20, 200,)
     productsList.push(p1)
-    p1 = new Product('JUGO', 10, 100)
+    p1 = new Product('JUGO', 10, 100,)
     productsList.push(p1)
-    p1 = new Product('GALLETAS', 100, 20)
+    p1 = new Product('GALLETAS', 100, 20,)
     productsList.push(p1)
-    p1 = new Product('BOLEADORAS', 250, 5)
+    p1 = new Product('BOLEADORAS', 250, 5,)
     productsList.push(p1)
     p1 = new Product('PONCHO ZARPADO', 1000, 2)
     productsList.push(p1)

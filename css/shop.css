@@ -18,6 +18,10 @@
     background: var(--verde);
 }
 
+.bg-gris {
+    background: var(--gris1);
+}
+
 .poppins {
     font-family: var(--poppins);
 }
