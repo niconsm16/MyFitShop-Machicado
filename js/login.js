@@ -26,12 +26,14 @@ function userType(e) {
 
     if ((b.value === "admin") && (c.value === "admin")) {
         // Si no existe stock en SessionStorage entonces se lo crea y se pasa la carga predefinida al mismo
-        if (!sessionStorage.getItem('stockATM')) { sessionStorage.setItem('stockATM', JSON.stringify(productsList)) }
+        !sessionStorage.getItem('stockATM') && sessionStorage.setItem('stockATM', JSON.stringify(productsList))
         // Una forma de redirección .replace()
         location.replace("../pages/admin.html")
 
     } else {
 
+        // Verifico la existencia de localCart en LocalStorage
+        !localStorage.getItem('localCart') && (localStorage.setItem('localCart', []))
         // Otra forma de redirección href
         location.href = "../pages/user.html"
     }

@@ -10,15 +10,6 @@ class Product {
         this.name = product
         this.price = price
         this.stock = amount
-        this.addToCart = function (a = 1) {
-            // Busco si el producto ingresado ya existe en el carrito (array cart)
-            let found = cart.find(n => n.product === this.name)
-            // Si no existe y devuelve undefined entonces ingreso el producto, si existe aumento la cantidad de productos adquiridos
-            found == undefined ? cart.push(new Carrito(this.name, a, this.price)) : found.amount++
-            // actualizo el número del icono Carrito
-            cartIconShow()
-        }
-
     }
 }
 
@@ -31,14 +22,28 @@ class Carrito {
         this.addToCart = function () {
             // Sumo una cantidad
             this.amount++
+            cartStructure()
+            cartIconShow()
         }
-        this.removeToCart = function () {
+        this.removeToCart = function (a) {
             // Si la cantidad es mayor a 1 le resto un valor, sino borro el elemento del carrito
-            this.amount > 1 ? this.amount-- : cart.splice(this, 1)
+            if (this.amount > 1) {
+                this.amount--
+                cartStructure()
+                cartIconShow()
+            } else {
+                cart.splice(a, 1);
+                cartStructure()
+                cartIconShow()
+                document.getElementById(`cart-${cleanVar(this.product)}`).remove()
+            }
         }
-        this.delToCart = function () {
+        this.delToCart = function (a) {
             //Borra el producto del carrito
-            cart.splice(this, 1)
+            cart.splice(a, 1)
+            cartStructure()
+            cartIconShow()
+            document.getElementById(`cart-${cleanVar(this.product)}`).remove()
         }
     }
 }

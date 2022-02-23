@@ -12,9 +12,8 @@ Swal.fire({
 <div style="color:rgb(67 126 101)">USER:<br>
 <div style="padding:0.5em 0"><i>user: (cualquier cosa)</i><br>
 <i>pass: (cualquier cosa)</i></div>
-<p style="font-size: 0.8em;">Diseñada primer interfaz<br>
-BUSCADOR TOTALMENTE FUNCIONAL<br>(Resultados parciales/completos)<br>
-Items precargados: gas, jugo, galletas, poncho zarpado, etc.</p></div>
+<p style="font-size: 0.8em;">TOTALMENTE FUNCIONAL<br>
+(Compren/borren/vacíen sin miedo, no pasa nada)</p></div>
 `,
 
     confirmButtonText: '<div style="color:black">Entendido!</div>',

@@ -36,7 +36,7 @@ function boxGenerator(boxy, sortby = productsList, randomSelect = true) {
                 <div class="card-footer">
                     <small class="text-muted">Stock: ${sortby[random].stock} u.</small>
                 </div>
-                <button type="button" onclick="${arrayName}[${random}].addToCart()" value=0 class="btn btn-success bg-verde border-light">Comprar</button>`
+                <button type="button" onclick="prodAddToCart(${arrayName},${random})" class="btn btn-success bg-verde border-light">Comprar</button>`
             box.append(boxInside)
             // Agrego el valor random a su lista forNoRepeat para no repetir el valor
             forNoRepeat.push(random)
