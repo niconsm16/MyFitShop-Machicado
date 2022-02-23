@@ -9,7 +9,7 @@ function cartIconShow() {
 
     let cola = 'bg-verde'
     let colb = 'text-black'
-    let colc = 'bg-black'
+    let colc = 'bg-gris3'
     let cold = 'text-white'
 
     cart.length === 0 ? cartCColor(cartItemsCount, cola, colb, colc, cold) : cartCColor(cartItemsCount, colc, cold, cola, colb)

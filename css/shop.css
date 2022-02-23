@@ -9,9 +9,23 @@
     --verdetrans: rgba(114, 215, 12, 0.93);
     --gris1: #BABABA;
     --gris2: #3D3D3D;
+    --gris3: #494949;
     --asap: 'Asap Condensed', sans-serif;
     --bigshoulders: 'Big Shoulders Text', cursive;
     --poppins: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(243, 243, 243, 0.533);
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .bg-verde {
@@ -20,6 +34,10 @@
 
 .bg-gris {
     background: var(--gris1);
+}
+
+.bg-gris3 {
+    background: var(--gris3);
 }
 
 .poppins {
@@ -68,19 +86,6 @@
     background-color: var(--verde);
 }
 
-body::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: rgba(243, 243, 243, 0.533);
-}
-
-body::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.8);
-}
-
 .dropdown-item:hover::after {
     content: "Próximamente!";
     background-color: black;
@@ -114,7 +119,7 @@ body::-webkit-scrollbar-track {
 }
 
 .r-21 {
-    right: 21em;
+    right: 21.4em;
 }
 
 .card-body {
@@ -127,6 +132,16 @@ body::-webkit-scrollbar-track {
 
 .h6em {
     height: 5em;
+}
+
+.cart-button {
+    padding: 0px 6px !important;
+    border-width: 0px !important;
+    border-style: outset !important;
+    border-image: initial !important;
+    font-weight: 700;
+    font-family: var(--asap);
+    -webkit-font-smoothing: antialiased;
 }
 
 /*# Librerias */
@@ -190,4 +205,8 @@ body::-webkit-scrollbar-track {
 
 .swal2-container {
     z-index: 4 !important;
+}
+
+.swal2-cart-container {
+    padding: 0;
 }
