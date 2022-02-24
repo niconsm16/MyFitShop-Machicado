@@ -73,7 +73,7 @@ let productSelected
 //# Stock
 
 // Datos prueba si no hay datos almacenados en el SessionStorage
-if (sessionStorage.getItem('stockATM') === null) {
+if (localStorage.getItem('stockATM') === null) {
 
     // Entonces creo stock de prueba
     let p1 = new Product('GAS', 20, 200,)
@@ -116,5 +116,5 @@ if (sessionStorage.getItem('stockATM') === null) {
     productsList.push(p1)
 
 } else {
-    productsList = JSON.parse(sessionStorage.getItem('stockATM'))
+    productsList = JSON.parse(localStorage.getItem('stockATM'))
 }

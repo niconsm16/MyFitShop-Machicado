@@ -49,4 +49,6 @@ function listProducts() {
         }
 
     }
+    localStorage.setItem('stockATM', JSON.stringify(productsList))
+
 }

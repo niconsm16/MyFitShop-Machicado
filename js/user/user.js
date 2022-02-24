@@ -2,14 +2,15 @@
 function updateCart() {
     // Si tengo productos en el carrito (por ende cart.length es mayor a 0) guardo los datos en el localstorage localCart
     cart.length > 0 && localStorage.setItem('localCart', JSON.stringify(cart))
-    // 
-    let tempcart = JSON.parse(localStorage.getItem('localCart'))
+    if (localStorage.getItem('localCart')) {
+        let tempcart = JSON.parse(localStorage.getItem('localCart'))
 
-    cart = []
-    tempcart.forEach(n => {
-        let p = new Carrito(n.product, n.amount, n.price)
-        cart.push(p)
-    })
+        cart = []
+        tempcart.forEach(n => {
+            let p = new Carrito(n.product, n.amount, n.price)
+            cart.push(p)
+        })
+    }
 
 } updateCart()
 

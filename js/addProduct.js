@@ -80,6 +80,7 @@ function addProduct() {
             resetFields()
             listProducts()
         }
+
     }
 
 

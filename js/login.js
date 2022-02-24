@@ -26,7 +26,7 @@ function userType(e) {
 
     if ((b.value === "admin") && (c.value === "admin")) {
         // Si no existe stock en SessionStorage entonces se lo crea y se pasa la carga predefinida al mismo
-        !sessionStorage.getItem('stockATM') && sessionStorage.setItem('stockATM', JSON.stringify(productsList))
+        !localStorage.getItem('stockATM') && localStorage.setItem('stockATM', JSON.stringify(productsList))
         // Una forma de redirección .replace()
         location.replace("../pages/admin.html")
 
@@ -34,12 +34,14 @@ function userType(e) {
 
         // Verifico la existencia de localCart en LocalStorage
         !localStorage.getItem('localCart') && (localStorage.setItem('localCart', []))
+        productsList = JSON.parse(localStorage.getItem('stockATM'))
         // Otra forma de redirección href
         location.href = "../pages/user.html"
     }
     // Almaceno en memoria al user para mantener sesión abierta hasta que él cliquee en logout, navegador cerrado mantiene valores
     localStorage.setItem('myfitusr', b.value)
     localStorage.setItem('myfitpass', c.value)
+
 }
 
 

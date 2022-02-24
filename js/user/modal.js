@@ -24,7 +24,7 @@ function cartStructure() {
         document.getElementById('cartDescription') && document.getElementById('cartDescription').remove()
         // Creo fila DESCRIPCION
         let cartDescription = document.createElement('div')
-        cartDescription.className = 'row align-items-center cart-letters'
+        cartDescription.className = 'row align-items-center cart-letters py-1'
         cartDescription.id = 'cartDescription'
         cartDescription.innerHTML = `<div class="col"> Producto</div>
                 <div class="col-3">Precio</div>
@@ -40,7 +40,7 @@ function cartStructure() {
             tempVar !== null && tempVar.remove()
 
             let childCart = document.createElement('div')
-            childCart.className = 'row align-items-center cart-letters'
+            childCart.className = 'row align-items-center cart-letters py-1'
             childCart.id = `cart-${cleanVar(n.product)}`
             childCart.innerHTML = `<div class="col">${n.product}</div>
                                 <div class="col-3">$${n.price}</div>
@@ -77,7 +77,7 @@ function cartStructure() {
 
         // Creo la fila del TOTAL
         let totalRow = document.createElement('div')
-        totalRow.className = 'row align-items-center cart-letters button-verde'
+        totalRow.className = 'row align-items-center cart-letters button-verde py-1'
         totalRow.id = 'totalCart'
         totalRow.innerHTML = `<div class="col">Total</div>
                 <div class="col-3">${totalPriceCart.toFixed(2)}</div>
