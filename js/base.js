@@ -3,6 +3,8 @@
 let productsList = []
 let cart = []
 
+
+
 // Clases
 
 class Product {
@@ -24,6 +26,7 @@ class Carrito {
             this.amount++
             cartStructure()
             cartIconShow()
+            updateCart()
         }
         this.removeToCart = function (a) {
             // Si la cantidad es mayor a 1 le resto un valor, sino borro el elemento del carrito
@@ -31,10 +34,13 @@ class Carrito {
                 this.amount--
                 cartStructure()
                 cartIconShow()
+                updateCart()
+
             } else {
                 cart.splice(a, 1);
                 cartStructure()
                 cartIconShow()
+                updateCart()
                 document.getElementById(`cart-${cleanVar(this.product)}`).remove()
             }
         }
@@ -43,6 +49,7 @@ class Carrito {
             cart.splice(a, 1)
             cartStructure()
             cartIconShow()
+            updateCart()
             document.getElementById(`cart-${cleanVar(this.product)}`).remove()
         }
     }

@@ -83,7 +83,7 @@ function cartStructure() {
                 <div class="col-3">${totalPriceCart.toFixed(2)}</div>
                 <div class="col-3 text-start">${totalProdCart}</div>
                 <div class="col-1"></div>`
-        firstDivCart.append(totalRow)
+        firstDivCart && firstDivCart.append(totalRow)
     }
 }
 
@@ -92,7 +92,7 @@ function cartStructure() {
 const modal = document.getElementById('cartItemsCount')
 modal.onclick = () => {
     Swal.fire({
-        title: 'TuCarrito <img src="https://raw.githubusercontent.com/niconsm16/Myfit-Machicado/master/src/images/myfitlogo3.webp" width="15%">',
+        title: 'Tu Carrito <img src="https://raw.githubusercontent.com/niconsm16/Myfit-Machicado/master/src/images/myfitlogo3.webp" width="15%">',
         html: `<div id="swACart" class="container overflow-hidden"></div>`,
         confirmButtonText: '<div title="No disponible (próximamente)">PAGAR</div>',
         confirmButtonColor: '#70D70C',
@@ -114,13 +114,14 @@ modal.onclick = () => {
     // Listo los objetos dentro del div swACart creado en el modal SAlert
     cartStructure()
 
-    // Creo el
+    // Creo la función para vaciar el carrito completo
     let abc = Swal.getDenyButton()
     abc.onclick = () => {
         cart = []
         document.getElementById('swACart').innerHTML = ''
         cartStructure()
         cartIconShow()
+        localStorage.setItem('localCart', [])
     }
 }
 
