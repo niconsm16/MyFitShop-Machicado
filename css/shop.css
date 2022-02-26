@@ -249,3 +249,17 @@ body::-webkit-scrollbar-track {
 .swal2-cart-container {
     padding: 0;
 }
+
+@media screen and (min-width:0px) and (max-width:991px) {
+
+    .div-carrito {
+        position: absolute;
+        top: 7%;
+        right: 4em;
+    }
+
+    .n-carrito {
+        position: absolute !important;
+        right: 2em;
+    }
+}
