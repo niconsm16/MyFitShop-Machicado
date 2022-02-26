@@ -9,7 +9,7 @@ function checklog() {
 
     if (sessionExists == null) {
 
-        if ((recogPath === "/pages/admin.html") || (recogPath === "/MyFitShop-Machicado/pages/admin.html") || (recogPath === "/MyFitShop-Machicado/pages/user.html") || (recogPath === "/pages/user.html") || (recogPath === "/MyFitShop-Machicado/pages/results.html") || (recogPath === "/pages/results.html")) {
+        if ((recogPath === "/pages/admin.html") || (recogPath === "/MyFitShop-Machicado/pages/admin.html") || (recogPath === "/MyFitShop-Machicado/pages/user.html") || (recogPath === "/pages/user.html") || (recogPath === "/MyFitShop-Machicado/pages/results.html") || (recogPath === "/pages/results.html") || (recogPath === "/pages/all.html") || (recogPath === "/MyFitShop-Machicado/pages/all.html")) {
             // Preparo el toastify para avisar del error
             sessionStorage.setItem('wrongAccess', true)
             // Si la key no existe (null) y trato de entrar a la sección admin o usuarios me redirecciona a login
@@ -27,7 +27,7 @@ function checklog() {
         // Si soy Admin...
         if ((b === "admin") && (c === "admin")) {
 
-            if ((recogPath === "/pages/user.html") || (recogPath === "/pages/login.html") || (recogPath === "/pages/results.html") || (recogPath === "/index.html") || (recogPath === "/MyFitShop-Machicado/pages/user.html") || (recogPath === "/MyFitShop-Machicado/pages/login.html") || (recogPath === "/MyFitShop-Machicado/pages/results.html") || (recogPath === "/MyFitShop-Machicado/index.html")) {
+            if ((recogPath === "/pages/user.html") || (recogPath === "/pages/login.html") || (recogPath === "/pages/results.html") || (recogPath === "/index.html") || (recogPath === "/MyFitShop-Machicado/pages/user.html") || (recogPath === "/MyFitShop-Machicado/pages/login.html") || (recogPath === "/MyFitShop-Machicado/pages/results.html") || (recogPath === "/MyFitShop-Machicado/index.html") || (recogPath === "/pages/all.html") || (recogPath === "/MyFitShop-Machicado/pages/all.html")) {
                 // Preparo el toastify para avisar del error
                 sessionStorage.setItem('wrongAccess', true)
                 // Si el usuario es admin y trata de ingresar a user lo devuelvo a su sección
