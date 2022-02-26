@@ -33,8 +33,6 @@ if (searchKey) {
                 </div>
                 <button type="button" onclick="prodAddToCart(productsList,${productsList.indexOf(n)})" class="btn btn-success bg-verde border-light">Comprar</button>`
 
-                //`<div class="w-50" id="${cleanVar(n.name)}">${n.name}</div><div class="w-25">${n.price}</div><div class="w-25">${n.stock}</div>`
-
                 // Agrego el valor
                 results.append(result)
                 // Aviso al sistema que se encontró al menos un resultado

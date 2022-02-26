@@ -80,7 +80,7 @@ function cartStructure() {
         totalRow.className = 'row align-items-center cart-letters button-verde py-1'
         totalRow.id = 'totalCart'
         totalRow.innerHTML = `<div class="col">Total</div>
-                <div class="col-3">${totalPriceCart.toFixed(2)}</div>
+                <div class="col-3" title='${(totalPriceCart.toFixed(2) / dolarblue).toFixed(2)} USD - ${(((totalPriceCart.toFixed(2) / dolarblue)) / btc).toFixed(8)} BTC'>${totalPriceCart.toFixed(2)}</div>
                 <div class="col-3 text-start">${totalProdCart}</div>
                 <div class="col-1"></div>`
         firstDivCart && firstDivCart.append(totalRow)
@@ -132,13 +132,3 @@ modal.onclick = () => {
 
 
 
-/*
-
-// Creo las celdas de totales
-let totalRow = document.createElement('div')
-totalRow.className = 'row align-items-center cart-letters'
-totalRow.innerHTML = `<div class="col">Total</div>
-                <div class="col-3">${totalPriceCart}</div>
-                <div class="col-3 text-start">${totalProdCart}</div>
-                <div class="col-1"></div>`
-firstDivCart.append(totalRow)   */

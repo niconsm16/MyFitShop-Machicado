@@ -1,3 +1,24 @@
+//# Obtengo precios del dolar blue y BTC
+// Variables Divisas
+let dolarblue
+let btc
+
+// Dolar Blue
+fetch('https://api.bluelytics.com.ar/v2/latest')
+    .then((response) => response.json())
+    .then((a) => {
+        dolarblue = parseFloat(a['blue'].value_sell)
+    })
+
+// BTC (Binance) - Ralenteo porque la api de Binance es mucho mas rápida que la del Dolar Blue
+setTimeout(() => {
+    fetch('https://api.binance.com/api/v3/ticker/price')
+        .then((response) => response.json())
+        .then((a) => {
+            btc = parseFloat(a[11].price).toFixed(8)
+        })
+}, 600);
+
 // Vinculo Carrito con LocalStorage
 function updateCart() {
     // Si tengo productos en el carrito (por ende cart.length es mayor a 0) guardo los datos en el localstorage localCart
