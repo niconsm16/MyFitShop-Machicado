@@ -11,13 +11,13 @@ fetch('https://api.bluelytics.com.ar/v2/latest')
     })
 
 // BTC (Binance) - Ralenteo porque la api de Binance es mucho mas rápida que la del Dolar Blue
-setTimeout(() => {
+setInterval(() => {
     fetch('https://api.binance.com/api/v3/ticker/price')
         .then((response) => response.json())
         .then((a) => {
             btc = parseFloat(a[11].price).toFixed(8)
         })
-}, 600);
+}, 60000);
 
 // Vinculo Carrito con LocalStorage
 function updateCart() {
