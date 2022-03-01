@@ -9,7 +9,7 @@ El mismo consiste en:
 - Sección Usuario: Compra y eliminación de productos de manera individual como en conjunto del carrito con la misma modalidad de acción en tiempo real
 - Interacción entre ambos usuarios
 - Buscador totalmente funcional, por coincidencia a partir de 3 letras de una o más palabras por separado y en conjunto
-- Tazador del monto total en Dolares (dolar blue) y BTC mediante APIs (Binance y Blulytics)
+- Tazador del monto total en Dolares (dolar blue) y BTC mediante APIs (Binance y Blulytics) -> Sobre el title del monto final del carrito
 ---
 
 #### Para el proyecto se usaron los siguientes lenguajes/complementos:<br><br>
