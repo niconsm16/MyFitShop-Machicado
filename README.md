@@ -1,5 +1,4 @@
 # MyFitShop - [Ecommerce][source]
-____
 
 ### Proyecto final de Js - Coderhouse
 
